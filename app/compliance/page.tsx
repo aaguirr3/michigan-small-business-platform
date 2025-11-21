@@ -73,19 +73,77 @@ export default function CompliancePage() {
 
     setIsLoading(true)
 
-    // Simulate AI response - in production this would call the AI SDK
-    const mockResponse: ComplianceResponse = {
-      id: Date.now().toString(),
-      question: question,
-      response: generateMockResponse(question, category),
-      category: category,
-      requiresLegalReview: shouldFlagLegal(question),
-      timestamp: new Date().toLocaleString(),
-    }
+    try {
+      // Call Watson AI API
+      const response = await fetch('/api/compliance/qa', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          question: question,
+          category: category,
+        }),
+      })
 
-    setResponses((prev) => [mockResponse, ...prev])
-    setQuestion("")
-    setIsLoading(false)
+      const data = await response.json()
+
+      // Log the response for debugging
+      console.log('Watson AI Response:', {
+        ok: response.ok,
+        status: response.status,
+        fallback: data.fallback,
+        hasError: !!data.error,
+        error: data.error,
+      })
+
+      // If there's an error message, log it
+      if (data.error) {
+        console.error('Watson AI Error:', data.error)
+        if (data.errorDetails) {
+          console.error('Error Details:', data.errorDetails)
+        }
+        if (data.debug) {
+          console.error('Debug Info:', data.debug)
+        }
+      }
+
+      // Even if response is not ok, we might have a fallback response
+      if (!response.ok && !data.response) {
+        throw new Error(data.error || 'Failed to get AI response')
+      }
+
+      const aiResponse: ComplianceResponse = {
+        id: Date.now().toString(),
+        question: question,
+        response: data.response || generateMockResponse(question, category),
+        category: category,
+        requiresLegalReview: data.requiresLegalReview || shouldFlagLegal(question),
+        timestamp: new Date().toLocaleString(),
+      }
+
+      // Add a warning if using fallback
+      if (data.fallback) {
+        console.warn('⚠️ Using fallback response. Watson AI may not be configured correctly.')
+      }
+
+      setResponses((prev) => [aiResponse, ...prev])
+      setQuestion("")
+    } catch (error) {
+      console.error('Error calling Watson AI:', error)
+      // Fallback to mock response if API fails
+      const fallbackResponse: ComplianceResponse = {
+        id: Date.now().toString(),
+        question: question,
+        response: generateMockResponse(question, category),
+        category: category,
+        requiresLegalReview: shouldFlagLegal(question),
+        timestamp: new Date().toLocaleString(),
+      }
+      setResponses((prev) => [fallbackResponse, ...prev])
+    } finally {
+      setIsLoading(false)
+    }
   }
 
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -101,13 +159,62 @@ export default function CompliancePage() {
 
     setIsAnalyzing(true)
 
-    // AI-powered permit analysis
-    const analysis = generatePermitAnalysis(businessIdea, businessLocation)
+    try {
+      // Call Watson AI API for permit analysis
+      const response = await fetch('/api/compliance/permit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          businessIdea: businessIdea,
+          businessLocation: businessLocation,
+        }),
+      })
 
-    setPermitAnalyses((prev) => [analysis, ...prev])
-    setBusinessIdea("")
-    setBusinessLocation("")
-    setIsAnalyzing(false)
+      const data = await response.json()
+
+      // Log the response for debugging
+      console.log('Watson AI Permit Response:', {
+        ok: response.ok,
+        status: response.status,
+        fallback: data.fallback,
+        hasError: !!data.error,
+        error: data.error,
+      })
+
+      if (!response.ok && !data.requiredPermits) {
+        throw new Error(data.error || 'Failed to analyze permits')
+      }
+
+      const analysis: PermitAnalysis = {
+        id: Date.now().toString(),
+        businessIdea: businessIdea,
+        location: businessLocation || 'Michigan',
+        requiredPermits: data.requiredPermits || [],
+        countyConsiderations: data.countyConsiderations || [],
+        costs: data.costs || [],
+        steps: data.steps || [],
+        missingDocuments: data.missingDocuments || [],
+        timestamp: new Date().toLocaleString(),
+      }
+
+      // Add a warning if using fallback
+      if (data.fallback) {
+        console.warn('⚠️ Using fallback permit analysis. Watson AI may not be configured correctly.')
+      }
+
+      setPermitAnalyses((prev) => [analysis, ...prev])
+      setBusinessIdea("")
+      setBusinessLocation("")
+    } catch (error) {
+      console.error('Error calling Watson AI:', error)
+      // Fallback to mock analysis if API fails
+      const fallbackAnalysis = generatePermitAnalysis(businessIdea, businessLocation)
+      setPermitAnalyses((prev) => [fallbackAnalysis, ...prev])
+    } finally {
+      setIsAnalyzing(false)
+    }
   }
 
   const generatePermitAnalysis = (idea: string, location: string): PermitAnalysis => {
@@ -409,14 +516,24 @@ export default function CompliancePage() {
                 <CardDescription>Common compliance topics</CardDescription>
               </CardHeader>
               <CardContent className="space-y-3">
-                <div className="p-3 bg-muted/50 rounded-lg hover:bg-muted transition-colors cursor-pointer">
+                <a 
+                  href="https://www.michigan.gov/taxes/business-taxes/sales-use-tax/information/filing-deadlines" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block p-3 bg-muted/50 rounded-lg hover:bg-muted transition-colors cursor-pointer"
+                >
                   <p className="font-medium text-sm text-foreground">Tax Filing Deadlines</p>
                   <p className="text-xs text-foreground/60">Michigan business tax schedule</p>
-                </div>
-                <div className="p-3 bg-muted/50 rounded-lg hover:bg-muted transition-colors cursor-pointer">
+                </a>
+                <a 
+                  href="https://www.michigan.gov/lara/learn-about/license-permits" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block p-3 bg-muted/50 rounded-lg hover:bg-muted transition-colors cursor-pointer"
+                >
                   <p className="font-medium text-sm text-foreground">Business License Requirements</p>
                   <p className="text-xs text-foreground/60">What you need to start legally</p>
-                </div>
+                </a>
                 <div className="p-3 bg-muted/50 rounded-lg hover:bg-muted transition-colors cursor-pointer">
                   <p className="font-medium text-sm text-foreground">Employment Law Basics</p>
                   <p className="text-xs text-foreground/60">Employee rights & responsibilities</p>

@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
+import { Textarea } from "@/components/ui/textarea"
 import {
   Select,
   SelectContent,
@@ -12,6 +13,14 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog"
 import Link from "next/link"
 import { Header } from "@/components/header"
 import { useAuth } from "@/contexts/auth-context"
@@ -105,20 +114,31 @@ const talentData: TalentProfile[] = [
 
 export default function TalentPage() {
   const router = useRouter()
-  const { isAuthenticated } = useAuth()
+  const { user, isAuthenticated } = useAuth()
   const [searchQuery, setSearchQuery] = useState("")
   const [selectedService, setSelectedService] = useState<string | undefined>(undefined)
   const [selectedCounty, setSelectedCounty] = useState<string | undefined>(undefined)
   const [connectedProfiles, setConnectedProfiles] = useState<number[]>([])
+  const [hasTalentProfile, setHasTalentProfile] = useState(false)
+  const [selectedTalent, setSelectedTalent] = useState<TalentProfile | null>(null)
+  const [messageDialogOpen, setMessageDialogOpen] = useState(false)
+  const [messageText, setMessageText] = useState("")
+  const [messages, setMessages] = useState<Record<number, Array<{ from: string; text: string; timestamp: string }>>>({})
 
   useEffect(() => {
     if (typeof window !== "undefined") {
       const currentUser = localStorage.getItem("currentUser")
       if (!currentUser || !isAuthenticated) {
         router.push("/login")
+        return
       }
+
+      // Check if user has a talent profile
+      const talentProfiles = JSON.parse(localStorage.getItem("talentProfiles") || "[]")
+      const userProfile = talentProfiles.find((p: any) => p.userEmail === user?.email)
+      setHasTalentProfile(!!userProfile)
     }
-  }, [isAuthenticated, router])
+  }, [isAuthenticated, router, user])
 
   if (!isAuthenticated) {
     return null
@@ -144,6 +164,31 @@ export default function TalentPage() {
     )
   }
 
+  const handleOpenMessage = (talent: TalentProfile) => {
+    setSelectedTalent(talent)
+    setMessageDialogOpen(true)
+    setMessageText("")
+  }
+
+  const handleSendMessage = () => {
+    if (!selectedTalent || !messageText.trim() || !user) return
+
+    const newMessage = {
+      from: user.name || user.email || "You",
+      text: messageText.trim(),
+      timestamp: new Date().toISOString(),
+    }
+
+    const updatedMessages = {
+      ...messages,
+      [selectedTalent.id]: [...(messages[selectedTalent.id] || []), newMessage],
+    }
+
+    setMessages(updatedMessages)
+    localStorage.setItem("talentMessages", JSON.stringify(updatedMessages))
+    setMessageText("")
+  }
+
   const serviceTypes = Array.from(new Set(talentData.map((t) => t.serviceType)))
 
   return (
@@ -159,22 +204,24 @@ export default function TalentPage() {
           </p>
         </div>
 
-        {/* Become a Provider Section - Full Width */}
-        <Card className="mb-8 border-secondary/20 bg-secondary/5">
-          <CardHeader className="pb-3">
-            <CardTitle className="text-lg font-semibold text-foreground">Are You a Professional or Service Provider?</CardTitle>
-            <CardDescription className="text-sm">
-              Join our network and connect with rural Michigan business owners who need your skills
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            <Link href="/talent/create-profile">
-              <Button className="bg-secondary hover:bg-secondary/90 text-secondary-foreground">
-                Create a Talent Profile
-              </Button>
-            </Link>
-          </CardContent>
-        </Card>
+        {/* Become a Provider Section - Full Width - Only show if user doesn't have a profile */}
+        {!hasTalentProfile && (
+          <Card className="mb-8 border-secondary/20 bg-secondary/5">
+            <CardHeader className="pb-3">
+              <CardTitle className="text-lg font-semibold text-foreground">Are You a Professional or Service Provider?</CardTitle>
+              <CardDescription className="text-sm">
+                Join our network and connect with rural Michigan business owners who need your skills
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <Link href="/talent/create-profile">
+                <Button className="bg-secondary hover:bg-secondary/90 text-secondary-foreground">
+                  Create a Talent Profile
+                </Button>
+              </Link>
+            </CardContent>
+          </Card>
+        )}
 
         {/* Filters */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
@@ -292,7 +339,12 @@ export default function TalentPage() {
                       >
                         {connectedProfiles.includes(talent.id) ? "✓ Connected" : "Connect"}
                       </button>
-                      <Button variant="outline" size="sm" className="flex-1 bg-transparent">
+                      <Button 
+                        variant="outline" 
+                        size="sm" 
+                        className="flex-1 bg-transparent"
+                        onClick={() => handleOpenMessage(talent)}
+                      >
                         Message
                       </Button>
                     </div>
@@ -320,6 +372,78 @@ export default function TalentPage() {
           </Card>
         )}
       </div>
+
+      {/* Message Dialog */}
+      <Dialog open={messageDialogOpen} onOpenChange={setMessageDialogOpen}>
+        <DialogContent className="max-w-2xl max-h-[80vh] flex flex-col">
+          <DialogHeader>
+            <DialogTitle>Message {selectedTalent?.name}</DialogTitle>
+            <DialogDescription>
+              Send a message to {selectedTalent?.name} about their {selectedTalent?.serviceType} services
+            </DialogDescription>
+          </DialogHeader>
+          
+          {/* Message History */}
+          <div className="flex-1 overflow-y-auto border border-border rounded-lg p-4 mb-4 bg-muted/30 min-h-[200px] max-h-[300px]">
+            {selectedTalent && messages[selectedTalent.id] && messages[selectedTalent.id].length > 0 ? (
+              <div className="space-y-3">
+                {messages[selectedTalent.id].map((msg, idx) => (
+                  <div key={idx} className="flex flex-col">
+                    <div className="flex items-center gap-2 mb-1">
+                      <span className="text-xs font-medium text-foreground/70">{msg.from}</span>
+                      <span className="text-xs text-foreground/50">
+                        {new Date(msg.timestamp).toLocaleString()}
+                      </span>
+                    </div>
+                    <div className="bg-white p-3 rounded-lg border border-border">
+                      <p className="text-sm text-foreground">{msg.text}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <div className="flex items-center justify-center h-full text-foreground/50">
+                <p className="text-sm">No messages yet. Start the conversation!</p>
+              </div>
+            )}
+          </div>
+
+          {/* Message Input */}
+          <div className="space-y-2">
+            <Textarea
+              placeholder="Type your message here..."
+              value={messageText}
+              onChange={(e) => setMessageText(e.target.value)}
+              rows={3}
+              className="resize-none"
+              onKeyDown={(e) => {
+                if (e.key === "Enter" && !e.shiftKey) {
+                  e.preventDefault()
+                  handleSendMessage()
+                }
+              }}
+            />
+            <div className="flex justify-end gap-2">
+              <Button
+                variant="outline"
+                onClick={() => {
+                  setMessageDialogOpen(false)
+                  setMessageText("")
+                }}
+              >
+                Close
+              </Button>
+              <Button
+                onClick={handleSendMessage}
+                disabled={!messageText.trim()}
+                className="bg-primary hover:bg-primary/90 text-primary-foreground"
+              >
+                Send Message
+              </Button>
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   )
 }

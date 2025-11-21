@@ -417,11 +417,22 @@ __turbopack_context__.s([
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/michigan-small-business-platform-3/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/michigan-small-business-platform-3/node_modules/next/dist/client/app-dir/link.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/michigan-small-business-platform-3/node_modules/next/navigation.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/michigan-small-business-platform-3/components/ui/button.tsx [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$contexts$2f$auth$2d$context$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/michigan-small-business-platform-3/contexts/auth-context.tsx [app-ssr] (ecmascript)");
+"use client";
+;
+;
 ;
 ;
 ;
 function Header() {
+    const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRouter"])();
+    const { user, logout, isAuthenticated } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$contexts$2f$auth$2d$context$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useAuth"])();
+    const handleLogout = ()=>{
+        logout();
+        router.push("/");
+    };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
         className: "border-b border-border/50 bg-white/95 backdrop-blur-sm sticky top-0 z-50",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -447,7 +458,7 @@ function Header() {
                                             fillOpacity: "0.1"
                                         }, void 0, false, {
                                             fileName: "[project]/Downloads/michigan-small-business-platform-3/components/header.tsx",
-                                            lineNumber: 14,
+                                            lineNumber: 26,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -458,7 +469,7 @@ function Header() {
                                             strokeLinejoin: "round"
                                         }, void 0, false, {
                                             fileName: "[project]/Downloads/michigan-small-business-platform-3/components/header.tsx",
-                                            lineNumber: 17,
+                                            lineNumber: 29,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -469,18 +480,18 @@ function Header() {
                                             strokeLinejoin: "round"
                                         }, void 0, false, {
                                             fileName: "[project]/Downloads/michigan-small-business-platform-3/components/header.tsx",
-                                            lineNumber: 22,
+                                            lineNumber: 34,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Downloads/michigan-small-business-platform-3/components/header.tsx",
-                                    lineNumber: 13,
+                                    lineNumber: 25,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/Downloads/michigan-small-business-platform-3/components/header.tsx",
-                                lineNumber: 11,
+                                lineNumber: 23,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -491,7 +502,7 @@ function Header() {
                                         children: "MittenLaunch"
                                     }, void 0, false, {
                                         fileName: "[project]/Downloads/michigan-small-business-platform-3/components/header.tsx",
-                                        lineNumber: 30,
+                                        lineNumber: 42,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -499,128 +510,194 @@ function Header() {
                                         children: "Michigan Business Platform"
                                     }, void 0, false, {
                                         fileName: "[project]/Downloads/michigan-small-business-platform-3/components/header.tsx",
-                                        lineNumber: 31,
+                                        lineNumber: 43,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Downloads/michigan-small-business-platform-3/components/header.tsx",
-                                lineNumber: 29,
+                                lineNumber: 41,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Downloads/michigan-small-business-platform-3/components/header.tsx",
-                        lineNumber: 10,
+                        lineNumber: 22,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "flex items-center gap-1 sm:gap-1",
-                        children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                href: "/dashboard",
-                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
-                                    variant: "ghost",
-                                    size: "sm",
-                                    className: "text-foreground/70 hover:text-foreground hover:bg-muted/50 text-sm font-medium",
-                                    children: "Dashboard"
+                        children: isAuthenticated ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                                    href: "/dashboard",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
+                                        variant: "ghost",
+                                        size: "sm",
+                                        className: "text-foreground/70 hover:text-foreground hover:bg-muted/50 text-sm font-medium",
+                                        children: "Dashboard"
+                                    }, void 0, false, {
+                                        fileName: "[project]/Downloads/michigan-small-business-platform-3/components/header.tsx",
+                                        lineNumber: 51,
+                                        columnNumber: 19
+                                    }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/Downloads/michigan-small-business-platform-3/components/header.tsx",
-                                    lineNumber: 37,
-                                    columnNumber: 15
-                                }, this)
-                            }, void 0, false, {
-                                fileName: "[project]/Downloads/michigan-small-business-platform-3/components/header.tsx",
-                                lineNumber: 36,
-                                columnNumber: 13
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                href: "/grants",
-                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
-                                    variant: "ghost",
-                                    size: "sm",
-                                    className: "text-foreground/70 hover:text-foreground hover:bg-muted/50 text-sm font-medium",
-                                    children: "Find Grants"
+                                    lineNumber: 50,
+                                    columnNumber: 17
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                                    href: "/grants",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
+                                        variant: "ghost",
+                                        size: "sm",
+                                        className: "text-foreground/70 hover:text-foreground hover:bg-muted/50 text-sm font-medium",
+                                        children: "Find Grants"
+                                    }, void 0, false, {
+                                        fileName: "[project]/Downloads/michigan-small-business-platform-3/components/header.tsx",
+                                        lineNumber: 56,
+                                        columnNumber: 19
+                                    }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/Downloads/michigan-small-business-platform-3/components/header.tsx",
-                                    lineNumber: 42,
-                                    columnNumber: 15
-                                }, this)
-                            }, void 0, false, {
-                                fileName: "[project]/Downloads/michigan-small-business-platform-3/components/header.tsx",
-                                lineNumber: 41,
-                                columnNumber: 13
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                href: "/compliance",
-                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
-                                    variant: "ghost",
-                                    size: "sm",
-                                    className: "text-foreground/70 hover:text-foreground hover:bg-muted/50 text-sm font-medium",
-                                    children: "AI Compliance"
+                                    lineNumber: 55,
+                                    columnNumber: 17
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                                    href: "/compliance",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
+                                        variant: "ghost",
+                                        size: "sm",
+                                        className: "text-foreground/70 hover:text-foreground hover:bg-muted/50 text-sm font-medium",
+                                        children: "AI Compliance"
+                                    }, void 0, false, {
+                                        fileName: "[project]/Downloads/michigan-small-business-platform-3/components/header.tsx",
+                                        lineNumber: 61,
+                                        columnNumber: 19
+                                    }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/Downloads/michigan-small-business-platform-3/components/header.tsx",
-                                    lineNumber: 47,
-                                    columnNumber: 15
-                                }, this)
-                            }, void 0, false, {
-                                fileName: "[project]/Downloads/michigan-small-business-platform-3/components/header.tsx",
-                                lineNumber: 46,
-                                columnNumber: 13
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                href: "/talent",
-                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
-                                    variant: "ghost",
-                                    size: "sm",
-                                    className: "text-foreground/70 hover:text-foreground hover:bg-muted/50 text-sm font-medium",
-                                    children: "Talent Connect"
+                                    lineNumber: 60,
+                                    columnNumber: 17
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                                    href: "/talent",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
+                                        variant: "ghost",
+                                        size: "sm",
+                                        className: "text-foreground/70 hover:text-foreground hover:bg-muted/50 text-sm font-medium",
+                                        children: "Talent Connect"
+                                    }, void 0, false, {
+                                        fileName: "[project]/Downloads/michigan-small-business-platform-3/components/header.tsx",
+                                        lineNumber: 66,
+                                        columnNumber: 19
+                                    }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/Downloads/michigan-small-business-platform-3/components/header.tsx",
-                                    lineNumber: 52,
-                                    columnNumber: 15
-                                }, this)
-                            }, void 0, false, {
-                                fileName: "[project]/Downloads/michigan-small-business-platform-3/components/header.tsx",
-                                lineNumber: 51,
-                                columnNumber: 13
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                href: "/business-formation",
-                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
-                                    size: "sm",
-                                    className: "bg-primary hover:bg-primary/90 text-white text-sm font-medium",
-                                    children: "Start Your Business"
+                                    lineNumber: 65,
+                                    columnNumber: 17
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                                    href: "/business-formation",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
+                                        size: "sm",
+                                        className: "bg-primary hover:bg-primary/90 text-white text-sm font-medium",
+                                        children: "Start Your Business"
+                                    }, void 0, false, {
+                                        fileName: "[project]/Downloads/michigan-small-business-platform-3/components/header.tsx",
+                                        lineNumber: 71,
+                                        columnNumber: 19
+                                    }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/Downloads/michigan-small-business-platform-3/components/header.tsx",
-                                    lineNumber: 57,
-                                    columnNumber: 15
+                                    lineNumber: 70,
+                                    columnNumber: 17
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "flex items-center gap-2 ml-2 pl-2 border-l border-border/50",
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                            className: "text-sm text-foreground/70 hidden sm:inline",
+                                            children: user?.name
+                                        }, void 0, false, {
+                                            fileName: "[project]/Downloads/michigan-small-business-platform-3/components/header.tsx",
+                                            lineNumber: 76,
+                                            columnNumber: 19
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
+                                            variant: "ghost",
+                                            size: "sm",
+                                            onClick: handleLogout,
+                                            className: "text-foreground/70 hover:text-foreground hover:bg-muted/50 text-sm font-medium",
+                                            children: "Logout"
+                                        }, void 0, false, {
+                                            fileName: "[project]/Downloads/michigan-small-business-platform-3/components/header.tsx",
+                                            lineNumber: 77,
+                                            columnNumber: 19
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/Downloads/michigan-small-business-platform-3/components/header.tsx",
+                                    lineNumber: 75,
+                                    columnNumber: 17
                                 }, this)
-                            }, void 0, false, {
-                                fileName: "[project]/Downloads/michigan-small-business-platform-3/components/header.tsx",
-                                lineNumber: 56,
-                                columnNumber: 13
-                            }, this)
-                        ]
-                    }, void 0, true, {
+                            ]
+                        }, void 0, true) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                                    href: "/login",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
+                                        variant: "ghost",
+                                        size: "sm",
+                                        className: "text-foreground/70 hover:text-foreground hover:bg-muted/50 text-sm font-medium",
+                                        children: "Login"
+                                    }, void 0, false, {
+                                        fileName: "[project]/Downloads/michigan-small-business-platform-3/components/header.tsx",
+                                        lineNumber: 90,
+                                        columnNumber: 19
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "[project]/Downloads/michigan-small-business-platform-3/components/header.tsx",
+                                    lineNumber: 89,
+                                    columnNumber: 17
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                                    href: "/signup",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
+                                        size: "sm",
+                                        className: "bg-primary hover:bg-primary/90 text-white text-sm font-medium",
+                                        children: "Sign Up"
+                                    }, void 0, false, {
+                                        fileName: "[project]/Downloads/michigan-small-business-platform-3/components/header.tsx",
+                                        lineNumber: 95,
+                                        columnNumber: 19
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "[project]/Downloads/michigan-small-business-platform-3/components/header.tsx",
+                                    lineNumber: 94,
+                                    columnNumber: 17
+                                }, this)
+                            ]
+                        }, void 0, true)
+                    }, void 0, false, {
                         fileName: "[project]/Downloads/michigan-small-business-platform-3/components/header.tsx",
-                        lineNumber: 35,
+                        lineNumber: 47,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/Downloads/michigan-small-business-platform-3/components/header.tsx",
-                lineNumber: 8,
+                lineNumber: 20,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/Downloads/michigan-small-business-platform-3/components/header.tsx",
-            lineNumber: 7,
+            lineNumber: 19,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/Downloads/michigan-small-business-platform-3/components/header.tsx",
-        lineNumber: 6,
+        lineNumber: 18,
         columnNumber: 5
     }, this);
 }
@@ -634,10 +711,12 @@ __turbopack_context__.s([
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/michigan-small-business-platform-3/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/michigan-small-business-platform-3/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/michigan-small-business-platform-3/node_modules/next/navigation.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/michigan-small-business-platform-3/components/ui/button.tsx [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/michigan-small-business-platform-3/components/ui/card.tsx [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/michigan-small-business-platform-3/components/ui/select.tsx [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$header$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/michigan-small-business-platform-3/components/header.tsx [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$contexts$2f$auth$2d$context$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/michigan-small-business-platform-3/contexts/auth-context.tsx [app-ssr] (ecmascript)");
 "use client";
 ;
 ;
@@ -645,7 +724,11 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$sma
 ;
 ;
 ;
+;
+;
 function CompliancePage() {
+    const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRouter"])();
+    const { isAuthenticated } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$contexts$2f$auth$2d$context$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useAuth"])();
     const [activeTab, setActiveTab] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("qa");
     const [question, setQuestion] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("");
     const [category, setCategory] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("general");
@@ -653,6 +736,16 @@ function CompliancePage() {
     const [responses, setResponses] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])([]);
     const [showDocUpload, setShowDocUpload] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
     const [uploadedFile, setUploadedFile] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        if ("TURBOPACK compile-time falsy", 0) //TURBOPACK unreachable
+        ;
+    }, [
+        isAuthenticated,
+        router
+    ]);
+    if (!isAuthenticated) {
+        return null;
+    }
     // Permit Checker State
     const [businessIdea, setBusinessIdea] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("");
     const [businessLocation, setBusinessLocation] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("");
@@ -835,7 +928,7 @@ function CompliancePage() {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$header$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Header"], {}, void 0, false, {
                 fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                lineNumber: 214,
+                lineNumber: 231,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -849,7 +942,7 @@ function CompliancePage() {
                                 children: "AI Compliance Assistant"
                             }, void 0, false, {
                                 fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                lineNumber: 219,
+                                lineNumber: 236,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -857,7 +950,7 @@ function CompliancePage() {
                                 children: "Business Licenses, Taxes, and Regulations. Get instant answers about permits, compliance, and Michigan business requirements."
                             }, void 0, false, {
                                 fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                lineNumber: 220,
+                                lineNumber: 237,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -870,25 +963,25 @@ function CompliancePage() {
                                             children: "AI Disclaimer:"
                                         }, void 0, false, {
                                             fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                            lineNumber: 227,
+                                            lineNumber: 244,
                                             columnNumber: 15
                                         }, this),
                                         " This tool provides general information only and is not legal advice. Always consult with qualified professionals (attorneys, accountants, etc.) before making compliance decisions."
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                    lineNumber: 226,
+                                    lineNumber: 243,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                lineNumber: 225,
+                                lineNumber: 242,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                        lineNumber: 218,
+                        lineNumber: 235,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -900,7 +993,7 @@ function CompliancePage() {
                                 children: "Q&A Assistant"
                             }, void 0, false, {
                                 fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                lineNumber: 234,
+                                lineNumber: 251,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -909,13 +1002,13 @@ function CompliancePage() {
                                 children: "Permit Checker"
                             }, void 0, false, {
                                 fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                lineNumber: 244,
+                                lineNumber: 261,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                        lineNumber: 233,
+                        lineNumber: 250,
                         columnNumber: 9
                     }, this),
                     activeTab === "qa" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -934,20 +1027,20 @@ function CompliancePage() {
                                                         children: "Ask a Question"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                        lineNumber: 262,
+                                                        lineNumber: 279,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CardDescription"], {
                                                         children: "Ask about tax compliance, licensing, employment law, safety, or other business compliance topics"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                        lineNumber: 263,
+                                                        lineNumber: 280,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                lineNumber: 261,
+                                                lineNumber: 278,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CardContent"], {
@@ -962,7 +1055,7 @@ function CompliancePage() {
                                                                     children: "Compliance Category"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                                    lineNumber: 270,
+                                                                    lineNumber: 287,
                                                                     columnNumber: 21
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Select"], {
@@ -975,12 +1068,12 @@ function CompliancePage() {
                                                                                 placeholder: "Select category"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                                                lineNumber: 273,
+                                                                                lineNumber: 290,
                                                                                 columnNumber: 25
                                                                             }, this)
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                                            lineNumber: 272,
+                                                                            lineNumber: 289,
                                                                             columnNumber: 23
                                                                         }, this),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SelectContent"], {
@@ -990,7 +1083,7 @@ function CompliancePage() {
                                                                                     children: "General Business"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                                                    lineNumber: 276,
+                                                                                    lineNumber: 293,
                                                                                     columnNumber: 25
                                                                                 }, this),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SelectItem"], {
@@ -998,7 +1091,7 @@ function CompliancePage() {
                                                                                     children: "Tax Compliance"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                                                    lineNumber: 277,
+                                                                                    lineNumber: 294,
                                                                                     columnNumber: 25
                                                                                 }, this),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SelectItem"], {
@@ -1006,7 +1099,7 @@ function CompliancePage() {
                                                                                     children: "Licensing & Permits"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                                                    lineNumber: 278,
+                                                                                    lineNumber: 295,
                                                                                     columnNumber: 25
                                                                                 }, this),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SelectItem"], {
@@ -1014,7 +1107,7 @@ function CompliancePage() {
                                                                                     children: "Employment Law"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                                                    lineNumber: 279,
+                                                                                    lineNumber: 296,
                                                                                     columnNumber: 25
                                                                                 }, this),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SelectItem"], {
@@ -1022,7 +1115,7 @@ function CompliancePage() {
                                                                                     children: "Health & Safety"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                                                    lineNumber: 280,
+                                                                                    lineNumber: 297,
                                                                                     columnNumber: 25
                                                                                 }, this),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SelectItem"], {
@@ -1030,44 +1123,17 @@ function CompliancePage() {
                                                                                     children: "Labor Regulations"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                                                    lineNumber: 281,
+                                                                                    lineNumber: 298,
                                                                                     columnNumber: 25
                                                                                 }, this)
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                                            lineNumber: 275,
+                                                                            lineNumber: 292,
                                                                             columnNumber: 23
                                                                         }, this)
                                                                     ]
                                                                 }, void 0, true, {
-                                                                    fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                                    lineNumber: 271,
-                                                                    columnNumber: 21
-                                                                }, this)
-                                                            ]
-                                                        }, void 0, true, {
-                                                            fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                            lineNumber: 269,
-                                                            columnNumber: 19
-                                                        }, this),
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                            children: [
-                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                                                    className: "block text-sm font-medium text-foreground mb-2",
-                                                                    children: "Your Question"
-                                                                }, void 0, false, {
-                                                                    fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                                    lineNumber: 287,
-                                                                    columnNumber: 21
-                                                                }, this),
-                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
-                                                                    placeholder: "e.g., What are the requirements for getting a business license in Michigan?",
-                                                                    value: question,
-                                                                    onChange: (e)=>setQuestion(e.target.value),
-                                                                    rows: 4,
-                                                                    className: "w-full px-3 py-2 border border-border rounded-lg bg-card text-foreground placeholder:text-foreground/50 focus:outline-none focus:ring-2 focus:ring-primary"
-                                                                }, void 0, false, {
                                                                     fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
                                                                     lineNumber: 288,
                                                                     columnNumber: 21
@@ -1078,6 +1144,33 @@ function CompliancePage() {
                                                             lineNumber: 286,
                                                             columnNumber: 19
                                                         }, this),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                            children: [
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                                                                    className: "block text-sm font-medium text-foreground mb-2",
+                                                                    children: "Your Question"
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
+                                                                    lineNumber: 304,
+                                                                    columnNumber: 21
+                                                                }, this),
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
+                                                                    placeholder: "e.g., What are the requirements for getting a business license in Michigan?",
+                                                                    value: question,
+                                                                    onChange: (e)=>setQuestion(e.target.value),
+                                                                    rows: 4,
+                                                                    className: "w-full px-3 py-2 border border-border rounded-lg bg-card text-foreground placeholder:text-foreground/50 focus:outline-none focus:ring-2 focus:ring-primary"
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
+                                                                    lineNumber: 305,
+                                                                    columnNumber: 21
+                                                                }, this)
+                                                            ]
+                                                        }, void 0, true, {
+                                                            fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
+                                                            lineNumber: 303,
+                                                            columnNumber: 19
+                                                        }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
                                                             type: "submit",
                                                             className: "w-full bg-primary hover:bg-primary/90 text-primary-foreground",
@@ -1085,24 +1178,24 @@ function CompliancePage() {
                                                             children: isLoading ? "Getting Answer..." : "Get AI Answer"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                            lineNumber: 297,
+                                                            lineNumber: 314,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                    lineNumber: 268,
+                                                    lineNumber: 285,
                                                     columnNumber: 17
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                lineNumber: 267,
+                                                lineNumber: 284,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                        lineNumber: 260,
+                                        lineNumber: 277,
                                         columnNumber: 13
                                     }, this),
                                     responses.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1112,7 +1205,7 @@ function CompliancePage() {
                                                 children: "Your Questions & Answers"
                                             }, void 0, false, {
                                                 fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                lineNumber: 311,
+                                                lineNumber: 328,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1132,7 +1225,7 @@ function CompliancePage() {
                                                                                     children: response.question
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                                                    lineNumber: 318,
+                                                                                    lineNumber: 335,
                                                                                     columnNumber: 29
                                                                                 }, this),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CardDescription"], {
@@ -1143,13 +1236,13 @@ function CompliancePage() {
                                                                                     ]
                                                                                 }, void 0, true, {
                                                                                     fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                                                    lineNumber: 319,
+                                                                                    lineNumber: 336,
                                                                                     columnNumber: 29
                                                                                 }, this)
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                                            lineNumber: 317,
+                                                                            lineNumber: 334,
                                                                             columnNumber: 27
                                                                         }, this),
                                                                         response.requiresLegalReview && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1157,18 +1250,18 @@ function CompliancePage() {
                                                                             children: "⚠️ Legal Review Recommended"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                                            lineNumber: 324,
+                                                                            lineNumber: 341,
                                                                             columnNumber: 29
                                                                         }, this)
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                                    lineNumber: 316,
+                                                                    lineNumber: 333,
                                                                     columnNumber: 25
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                                lineNumber: 315,
+                                                                lineNumber: 332,
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CardContent"], {
@@ -1180,12 +1273,12 @@ function CompliancePage() {
                                                                             children: response.response
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                                            lineNumber: 332,
+                                                                            lineNumber: 349,
                                                                             columnNumber: 27
                                                                         }, this)
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                                        lineNumber: 331,
+                                                                        lineNumber: 348,
                                                                         columnNumber: 25
                                                                     }, this),
                                                                     response.requiresLegalReview && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1196,7 +1289,7 @@ function CompliancePage() {
                                                                                 children: "Important Notice"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                                                lineNumber: 336,
+                                                                                lineNumber: 353,
                                                                                 columnNumber: 29
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1204,13 +1297,13 @@ function CompliancePage() {
                                                                                 children: "This topic involves legal considerations. We recommend consulting with a qualified attorney in Michigan to ensure your business is fully compliant."
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                                                lineNumber: 337,
+                                                                                lineNumber: 354,
                                                                                 columnNumber: 29
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                                        lineNumber: 335,
+                                                                        lineNumber: 352,
                                                                         columnNumber: 27
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1218,36 +1311,36 @@ function CompliancePage() {
                                                                         children: response.timestamp
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                                        lineNumber: 343,
+                                                                        lineNumber: 360,
                                                                         columnNumber: 25
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                                lineNumber: 330,
+                                                                lineNumber: 347,
                                                                 columnNumber: 23
                                                             }, this)
                                                         ]
                                                     }, response.id, true, {
                                                         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                        lineNumber: 314,
+                                                        lineNumber: 331,
                                                         columnNumber: 21
                                                     }, this))
                                             }, void 0, false, {
                                                 fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                lineNumber: 312,
+                                                lineNumber: 329,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                        lineNumber: 310,
+                                        lineNumber: 327,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                lineNumber: 259,
+                                lineNumber: 276,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1263,20 +1356,20 @@ function CompliancePage() {
                                                         children: "Document Review"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                        lineNumber: 357,
+                                                        lineNumber: 374,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CardDescription"], {
                                                         children: "Upload business documents for AI analysis"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                        lineNumber: 358,
+                                                        lineNumber: 375,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                lineNumber: 356,
+                                                lineNumber: 373,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CardContent"], {
@@ -1292,7 +1385,7 @@ function CompliancePage() {
                                                                 accept: ".pdf,.doc,.docx,.txt"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                                lineNumber: 362,
+                                                                lineNumber: 379,
                                                                 columnNumber: 19
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -1304,7 +1397,7 @@ function CompliancePage() {
                                                                         children: "📄"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                                        lineNumber: 370,
+                                                                        lineNumber: 387,
                                                                         columnNumber: 21
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1312,7 +1405,7 @@ function CompliancePage() {
                                                                         children: uploadedFile ? uploadedFile : "Click to upload or drag and drop"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                                        lineNumber: 371,
+                                                                        lineNumber: 388,
                                                                         columnNumber: 21
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1320,19 +1413,19 @@ function CompliancePage() {
                                                                         children: "PDF, DOC, or TXT files"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                                        lineNumber: 374,
+                                                                        lineNumber: 391,
                                                                         columnNumber: 21
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                                lineNumber: 369,
+                                                                lineNumber: 386,
                                                                 columnNumber: 19
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                        lineNumber: 361,
+                                                        lineNumber: 378,
                                                         columnNumber: 17
                                                     }, this),
                                                     uploadedFile && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
@@ -1341,19 +1434,19 @@ function CompliancePage() {
                                                         children: "Analyze Document"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                        lineNumber: 378,
+                                                        lineNumber: 395,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                lineNumber: 360,
+                                                lineNumber: 377,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                        lineNumber: 355,
+                                        lineNumber: 372,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Card"], {
@@ -1366,20 +1459,20 @@ function CompliancePage() {
                                                         children: "Quick Resources"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                        lineNumber: 391,
+                                                        lineNumber: 408,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CardDescription"], {
                                                         children: "Common compliance topics"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                        lineNumber: 392,
+                                                        lineNumber: 409,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                lineNumber: 390,
+                                                lineNumber: 407,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CardContent"], {
@@ -1393,7 +1486,7 @@ function CompliancePage() {
                                                                 children: "Tax Filing Deadlines"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                                lineNumber: 396,
+                                                                lineNumber: 413,
                                                                 columnNumber: 19
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1401,13 +1494,13 @@ function CompliancePage() {
                                                                 children: "Michigan business tax schedule"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                                lineNumber: 397,
+                                                                lineNumber: 414,
                                                                 columnNumber: 19
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                        lineNumber: 395,
+                                                        lineNumber: 412,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1418,7 +1511,7 @@ function CompliancePage() {
                                                                 children: "Business License Requirements"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                                lineNumber: 400,
+                                                                lineNumber: 417,
                                                                 columnNumber: 19
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1426,13 +1519,13 @@ function CompliancePage() {
                                                                 children: "What you need to start legally"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                                lineNumber: 401,
+                                                                lineNumber: 418,
                                                                 columnNumber: 19
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                        lineNumber: 399,
+                                                        lineNumber: 416,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1443,7 +1536,7 @@ function CompliancePage() {
                                                                 children: "Employment Law Basics"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                                lineNumber: 404,
+                                                                lineNumber: 421,
                                                                 columnNumber: 19
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1451,13 +1544,13 @@ function CompliancePage() {
                                                                 children: "Employee rights & responsibilities"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                                lineNumber: 405,
+                                                                lineNumber: 422,
                                                                 columnNumber: 19
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                        lineNumber: 403,
+                                                        lineNumber: 420,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1468,7 +1561,7 @@ function CompliancePage() {
                                                                 children: "Workplace Safety Standards"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                                lineNumber: 408,
+                                                                lineNumber: 425,
                                                                 columnNumber: 19
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1476,13 +1569,13 @@ function CompliancePage() {
                                                                 children: "OSHA & Michigan requirements"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                                lineNumber: 409,
+                                                                lineNumber: 426,
                                                                 columnNumber: 19
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                        lineNumber: 407,
+                                                        lineNumber: 424,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1493,7 +1586,7 @@ function CompliancePage() {
                                                                 children: "Environmental Compliance"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                                lineNumber: 412,
+                                                                lineNumber: 429,
                                                                 columnNumber: 19
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1501,37 +1594,37 @@ function CompliancePage() {
                                                                 children: "Regulations for your industry"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                                lineNumber: 413,
+                                                                lineNumber: 430,
                                                                 columnNumber: 19
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                        lineNumber: 411,
+                                                        lineNumber: 428,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                lineNumber: 394,
+                                                lineNumber: 411,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                        lineNumber: 389,
+                                        lineNumber: 406,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                lineNumber: 353,
+                                lineNumber: 370,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                        lineNumber: 257,
+                        lineNumber: 274,
                         columnNumber: 9
                     }, this),
                     activeTab === "permit" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1547,20 +1640,20 @@ function CompliancePage() {
                                                 children: "AI Permit Checker"
                                             }, void 0, false, {
                                                 fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                lineNumber: 427,
+                                                lineNumber: 444,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CardDescription"], {
                                                 children: "Describe your business idea and location to get a comprehensive list of required Michigan permits, licenses, costs, and steps."
                                             }, void 0, false, {
                                                 fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                lineNumber: 428,
+                                                lineNumber: 445,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                        lineNumber: 426,
+                                        lineNumber: 443,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CardContent"], {
@@ -1575,7 +1668,7 @@ function CompliancePage() {
                                                             children: "Describe Your Business Idea"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                            lineNumber: 435,
+                                                            lineNumber: 452,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
@@ -1586,13 +1679,13 @@ function CompliancePage() {
                                                             className: "w-full px-3 py-2 border border-border rounded-lg bg-card text-foreground placeholder:text-foreground/50 focus:outline-none focus:ring-2 focus:ring-primary"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                            lineNumber: 438,
+                                                            lineNumber: 455,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                    lineNumber: 434,
+                                                    lineNumber: 451,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1602,7 +1695,7 @@ function CompliancePage() {
                                                             children: "Business Location (City/County)"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                            lineNumber: 448,
+                                                            lineNumber: 465,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -1613,13 +1706,13 @@ function CompliancePage() {
                                                             className: "w-full px-3 py-2 border border-border rounded-lg bg-card text-foreground placeholder:text-foreground/50 focus:outline-none focus:ring-2 focus:ring-primary"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                            lineNumber: 451,
+                                                            lineNumber: 468,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                    lineNumber: 447,
+                                                    lineNumber: 464,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
@@ -1629,24 +1722,24 @@ function CompliancePage() {
                                                     children: isAnalyzing ? "Analyzing Permits..." : "Check Required Permits"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                    lineNumber: 460,
+                                                    lineNumber: 477,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                            lineNumber: 433,
+                                            lineNumber: 450,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                        lineNumber: 432,
+                                        lineNumber: 449,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                lineNumber: 425,
+                                lineNumber: 442,
                                 columnNumber: 13
                             }, this),
                             permitAnalyses.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1656,7 +1749,7 @@ function CompliancePage() {
                                         children: "Your Permit Analysis"
                                     }, void 0, false, {
                                         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                        lineNumber: 474,
+                                        lineNumber: 491,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1675,7 +1768,7 @@ function CompliancePage() {
                                                                             children: analysis.businessIdea
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                                            lineNumber: 481,
+                                                                            lineNumber: 498,
                                                                             columnNumber: 29
                                                                         }, this),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CardDescription"], {
@@ -1686,13 +1779,13 @@ function CompliancePage() {
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                                            lineNumber: 482,
+                                                                            lineNumber: 499,
                                                                             columnNumber: 29
                                                                         }, this)
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                                    lineNumber: 480,
+                                                                    lineNumber: 497,
                                                                     columnNumber: 27
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1700,18 +1793,18 @@ function CompliancePage() {
                                                                     children: analysis.timestamp
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                                    lineNumber: 484,
+                                                                    lineNumber: 501,
                                                                     columnNumber: 27
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                            lineNumber: 479,
+                                                            lineNumber: 496,
                                                             columnNumber: 25
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                        lineNumber: 478,
+                                                        lineNumber: 495,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CardContent"], {
@@ -1726,7 +1819,7 @@ function CompliancePage() {
                                                                                 children: "📋"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                                                lineNumber: 491,
+                                                                                lineNumber: 508,
                                                                                 columnNumber: 29
                                                                             }, this),
                                                                             " Required Permits & Licenses (",
@@ -1735,7 +1828,7 @@ function CompliancePage() {
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                                        lineNumber: 490,
+                                                                        lineNumber: 507,
                                                                         columnNumber: 27
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1747,23 +1840,23 @@ function CompliancePage() {
                                                                                     children: permit
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                                                    lineNumber: 496,
+                                                                                    lineNumber: 513,
                                                                                     columnNumber: 33
                                                                                 }, this)
                                                                             }, idx, false, {
                                                                                 fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                                                lineNumber: 495,
+                                                                                lineNumber: 512,
                                                                                 columnNumber: 31
                                                                             }, this))
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                                        lineNumber: 493,
+                                                                        lineNumber: 510,
                                                                         columnNumber: 27
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                                lineNumber: 489,
+                                                                lineNumber: 506,
                                                                 columnNumber: 25
                                                             }, this),
                                                             analysis.countyConsiderations.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1775,14 +1868,14 @@ function CompliancePage() {
                                                                                 children: "🏛️"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                                                lineNumber: 506,
+                                                                                lineNumber: 523,
                                                                                 columnNumber: 31
                                                                             }, this),
                                                                             " County-Level Considerations"
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                                        lineNumber: 505,
+                                                                        lineNumber: 522,
                                                                         columnNumber: 29
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -1794,31 +1887,31 @@ function CompliancePage() {
                                                                                         children: "•"
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                                                        lineNumber: 511,
+                                                                                        lineNumber: 528,
                                                                                         columnNumber: 35
                                                                                     }, this),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                                         children: consideration
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                                                        lineNumber: 512,
+                                                                                        lineNumber: 529,
                                                                                         columnNumber: 35
                                                                                     }, this)
                                                                                 ]
                                                                             }, idx, true, {
                                                                                 fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                                                lineNumber: 510,
+                                                                                lineNumber: 527,
                                                                                 columnNumber: 33
                                                                             }, this))
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                                        lineNumber: 508,
+                                                                        lineNumber: 525,
                                                                         columnNumber: 29
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                                lineNumber: 504,
+                                                                lineNumber: 521,
                                                                 columnNumber: 27
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1830,14 +1923,14 @@ function CompliancePage() {
                                                                                 children: "💰"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                                                lineNumber: 522,
+                                                                                lineNumber: 539,
                                                                                 columnNumber: 29
                                                                             }, this),
                                                                             " Estimated Costs"
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                                        lineNumber: 521,
+                                                                        lineNumber: 538,
                                                                         columnNumber: 27
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1851,7 +1944,7 @@ function CompliancePage() {
                                                                                             children: cost.item
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                                                            lineNumber: 527,
+                                                                                            lineNumber: 544,
                                                                                             columnNumber: 33
                                                                                         }, this),
                                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1859,13 +1952,13 @@ function CompliancePage() {
                                                                                             children: cost.cost
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                                                            lineNumber: 528,
+                                                                                            lineNumber: 545,
                                                                                             columnNumber: 33
                                                                                         }, this)
                                                                                     ]
                                                                                 }, idx, true, {
                                                                                     fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                                                    lineNumber: 526,
+                                                                                    lineNumber: 543,
                                                                                     columnNumber: 31
                                                                                 }, this)),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1878,7 +1971,7 @@ function CompliancePage() {
                                                                                             children: "Estimated Total"
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                                                            lineNumber: 533,
+                                                                                            lineNumber: 550,
                                                                                             columnNumber: 33
                                                                                         }, this),
                                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1893,30 +1986,30 @@ function CompliancePage() {
                                                                                             ]
                                                                                         }, void 0, true, {
                                                                                             fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                                                            lineNumber: 534,
+                                                                                            lineNumber: 551,
                                                                                             columnNumber: 33
                                                                                         }, this)
                                                                                     ]
                                                                                 }, void 0, true, {
                                                                                     fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                                                    lineNumber: 532,
+                                                                                    lineNumber: 549,
                                                                                     columnNumber: 31
                                                                                 }, this)
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                                                lineNumber: 531,
+                                                                                lineNumber: 548,
                                                                                 columnNumber: 29
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                                        lineNumber: 524,
+                                                                        lineNumber: 541,
                                                                         columnNumber: 27
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                                lineNumber: 520,
+                                                                lineNumber: 537,
                                                                 columnNumber: 25
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1928,14 +2021,14 @@ function CompliancePage() {
                                                                                 children: "✅"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                                                lineNumber: 548,
+                                                                                lineNumber: 565,
                                                                                 columnNumber: 29
                                                                             }, this),
                                                                             " Steps to Get Started"
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                                        lineNumber: 547,
+                                                                        lineNumber: 564,
                                                                         columnNumber: 27
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ol", {
@@ -1945,18 +2038,18 @@ function CompliancePage() {
                                                                                 children: step
                                                                             }, idx, false, {
                                                                                 fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                                                lineNumber: 552,
+                                                                                lineNumber: 569,
                                                                                 columnNumber: 31
                                                                             }, this))
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                                        lineNumber: 550,
+                                                                        lineNumber: 567,
                                                                         columnNumber: 27
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                                lineNumber: 546,
+                                                                lineNumber: 563,
                                                                 columnNumber: 25
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1968,14 +2061,14 @@ function CompliancePage() {
                                                                                 children: "📄"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                                                lineNumber: 560,
+                                                                                lineNumber: 577,
                                                                                 columnNumber: 29
                                                                             }, this),
                                                                             " Documents You'll Need"
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                                        lineNumber: 559,
+                                                                        lineNumber: 576,
                                                                         columnNumber: 27
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1985,59 +2078,59 @@ function CompliancePage() {
                                                                                 children: doc
                                                                             }, idx, false, {
                                                                                 fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                                                lineNumber: 564,
+                                                                                lineNumber: 581,
                                                                                 columnNumber: 31
                                                                             }, this))
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                                        lineNumber: 562,
+                                                                        lineNumber: 579,
                                                                         columnNumber: 27
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                                lineNumber: 558,
+                                                                lineNumber: 575,
                                                                 columnNumber: 25
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                        lineNumber: 487,
+                                                        lineNumber: 504,
                                                         columnNumber: 23
                                                     }, this)
                                                 ]
                                             }, analysis.id, true, {
                                                 fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                                lineNumber: 477,
+                                                lineNumber: 494,
                                                 columnNumber: 21
                                             }, this))
                                     }, void 0, false, {
                                         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                        lineNumber: 475,
+                                        lineNumber: 492,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                                lineNumber: 473,
+                                lineNumber: 490,
                                 columnNumber: 15
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                        lineNumber: 423,
+                        lineNumber: 440,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-                lineNumber: 217,
+                lineNumber: 234,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/compliance/page.tsx",
-        lineNumber: 213,
+        lineNumber: 230,
         columnNumber: 5
     }, this);
 }

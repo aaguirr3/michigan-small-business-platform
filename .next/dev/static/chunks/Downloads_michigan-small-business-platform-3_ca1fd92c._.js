@@ -499,11 +499,24 @@ __turbopack_context__.s([
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/michigan-small-business-platform-3/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/michigan-small-business-platform-3/node_modules/next/dist/client/app-dir/link.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/michigan-small-business-platform-3/node_modules/next/navigation.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/michigan-small-business-platform-3/components/ui/button.tsx [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$contexts$2f$auth$2d$context$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/michigan-small-business-platform-3/contexts/auth-context.tsx [app-client] (ecmascript)");
+;
+var _s = __turbopack_context__.k.signature();
+"use client";
+;
 ;
 ;
 ;
 function Header() {
+    _s();
+    const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"])();
+    const { user, logout, isAuthenticated } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$contexts$2f$auth$2d$context$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useAuth"])();
+    const handleLogout = ()=>{
+        logout();
+        router.push("/");
+    };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
         className: "border-b border-border/50 bg-white/95 backdrop-blur-sm sticky top-0 z-50",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -529,7 +542,7 @@ function Header() {
                                             fillOpacity: "0.1"
                                         }, void 0, false, {
                                             fileName: "[project]/Downloads/michigan-small-business-platform-3/components/header.tsx",
-                                            lineNumber: 14,
+                                            lineNumber: 26,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -540,7 +553,7 @@ function Header() {
                                             strokeLinejoin: "round"
                                         }, void 0, false, {
                                             fileName: "[project]/Downloads/michigan-small-business-platform-3/components/header.tsx",
-                                            lineNumber: 17,
+                                            lineNumber: 29,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -551,18 +564,18 @@ function Header() {
                                             strokeLinejoin: "round"
                                         }, void 0, false, {
                                             fileName: "[project]/Downloads/michigan-small-business-platform-3/components/header.tsx",
-                                            lineNumber: 22,
+                                            lineNumber: 34,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Downloads/michigan-small-business-platform-3/components/header.tsx",
-                                    lineNumber: 13,
+                                    lineNumber: 25,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/Downloads/michigan-small-business-platform-3/components/header.tsx",
-                                lineNumber: 11,
+                                lineNumber: 23,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -573,7 +586,7 @@ function Header() {
                                         children: "MittenLaunch"
                                     }, void 0, false, {
                                         fileName: "[project]/Downloads/michigan-small-business-platform-3/components/header.tsx",
-                                        lineNumber: 30,
+                                        lineNumber: 42,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -581,131 +594,203 @@ function Header() {
                                         children: "Michigan Business Platform"
                                     }, void 0, false, {
                                         fileName: "[project]/Downloads/michigan-small-business-platform-3/components/header.tsx",
-                                        lineNumber: 31,
+                                        lineNumber: 43,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Downloads/michigan-small-business-platform-3/components/header.tsx",
-                                lineNumber: 29,
+                                lineNumber: 41,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Downloads/michigan-small-business-platform-3/components/header.tsx",
-                        lineNumber: 10,
+                        lineNumber: 22,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "flex items-center gap-1 sm:gap-1",
-                        children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                href: "/dashboard",
-                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
-                                    variant: "ghost",
-                                    size: "sm",
-                                    className: "text-foreground/70 hover:text-foreground hover:bg-muted/50 text-sm font-medium",
-                                    children: "Dashboard"
+                        children: isAuthenticated ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                    href: "/dashboard",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
+                                        variant: "ghost",
+                                        size: "sm",
+                                        className: "text-foreground/70 hover:text-foreground hover:bg-muted/50 text-sm font-medium",
+                                        children: "Dashboard"
+                                    }, void 0, false, {
+                                        fileName: "[project]/Downloads/michigan-small-business-platform-3/components/header.tsx",
+                                        lineNumber: 51,
+                                        columnNumber: 19
+                                    }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/Downloads/michigan-small-business-platform-3/components/header.tsx",
-                                    lineNumber: 37,
-                                    columnNumber: 15
-                                }, this)
-                            }, void 0, false, {
-                                fileName: "[project]/Downloads/michigan-small-business-platform-3/components/header.tsx",
-                                lineNumber: 36,
-                                columnNumber: 13
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                href: "/grants",
-                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
-                                    variant: "ghost",
-                                    size: "sm",
-                                    className: "text-foreground/70 hover:text-foreground hover:bg-muted/50 text-sm font-medium",
-                                    children: "Find Grants"
+                                    lineNumber: 50,
+                                    columnNumber: 17
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                    href: "/grants",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
+                                        variant: "ghost",
+                                        size: "sm",
+                                        className: "text-foreground/70 hover:text-foreground hover:bg-muted/50 text-sm font-medium",
+                                        children: "Find Grants"
+                                    }, void 0, false, {
+                                        fileName: "[project]/Downloads/michigan-small-business-platform-3/components/header.tsx",
+                                        lineNumber: 56,
+                                        columnNumber: 19
+                                    }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/Downloads/michigan-small-business-platform-3/components/header.tsx",
-                                    lineNumber: 42,
-                                    columnNumber: 15
-                                }, this)
-                            }, void 0, false, {
-                                fileName: "[project]/Downloads/michigan-small-business-platform-3/components/header.tsx",
-                                lineNumber: 41,
-                                columnNumber: 13
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                href: "/compliance",
-                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
-                                    variant: "ghost",
-                                    size: "sm",
-                                    className: "text-foreground/70 hover:text-foreground hover:bg-muted/50 text-sm font-medium",
-                                    children: "AI Compliance"
+                                    lineNumber: 55,
+                                    columnNumber: 17
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                    href: "/compliance",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
+                                        variant: "ghost",
+                                        size: "sm",
+                                        className: "text-foreground/70 hover:text-foreground hover:bg-muted/50 text-sm font-medium",
+                                        children: "AI Compliance"
+                                    }, void 0, false, {
+                                        fileName: "[project]/Downloads/michigan-small-business-platform-3/components/header.tsx",
+                                        lineNumber: 61,
+                                        columnNumber: 19
+                                    }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/Downloads/michigan-small-business-platform-3/components/header.tsx",
-                                    lineNumber: 47,
-                                    columnNumber: 15
-                                }, this)
-                            }, void 0, false, {
-                                fileName: "[project]/Downloads/michigan-small-business-platform-3/components/header.tsx",
-                                lineNumber: 46,
-                                columnNumber: 13
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                href: "/talent",
-                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
-                                    variant: "ghost",
-                                    size: "sm",
-                                    className: "text-foreground/70 hover:text-foreground hover:bg-muted/50 text-sm font-medium",
-                                    children: "Talent Connect"
+                                    lineNumber: 60,
+                                    columnNumber: 17
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                    href: "/talent",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
+                                        variant: "ghost",
+                                        size: "sm",
+                                        className: "text-foreground/70 hover:text-foreground hover:bg-muted/50 text-sm font-medium",
+                                        children: "Talent Connect"
+                                    }, void 0, false, {
+                                        fileName: "[project]/Downloads/michigan-small-business-platform-3/components/header.tsx",
+                                        lineNumber: 66,
+                                        columnNumber: 19
+                                    }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/Downloads/michigan-small-business-platform-3/components/header.tsx",
-                                    lineNumber: 52,
-                                    columnNumber: 15
-                                }, this)
-                            }, void 0, false, {
-                                fileName: "[project]/Downloads/michigan-small-business-platform-3/components/header.tsx",
-                                lineNumber: 51,
-                                columnNumber: 13
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                href: "/business-formation",
-                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
-                                    size: "sm",
-                                    className: "bg-primary hover:bg-primary/90 text-white text-sm font-medium",
-                                    children: "Start Your Business"
+                                    lineNumber: 65,
+                                    columnNumber: 17
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                    href: "/business-formation",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
+                                        size: "sm",
+                                        className: "bg-primary hover:bg-primary/90 text-white text-sm font-medium",
+                                        children: "Start Your Business"
+                                    }, void 0, false, {
+                                        fileName: "[project]/Downloads/michigan-small-business-platform-3/components/header.tsx",
+                                        lineNumber: 71,
+                                        columnNumber: 19
+                                    }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/Downloads/michigan-small-business-platform-3/components/header.tsx",
-                                    lineNumber: 57,
-                                    columnNumber: 15
+                                    lineNumber: 70,
+                                    columnNumber: 17
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "flex items-center gap-2 ml-2 pl-2 border-l border-border/50",
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                            className: "text-sm text-foreground/70 hidden sm:inline",
+                                            children: user?.name
+                                        }, void 0, false, {
+                                            fileName: "[project]/Downloads/michigan-small-business-platform-3/components/header.tsx",
+                                            lineNumber: 76,
+                                            columnNumber: 19
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
+                                            variant: "ghost",
+                                            size: "sm",
+                                            onClick: handleLogout,
+                                            className: "text-foreground/70 hover:text-foreground hover:bg-muted/50 text-sm font-medium",
+                                            children: "Logout"
+                                        }, void 0, false, {
+                                            fileName: "[project]/Downloads/michigan-small-business-platform-3/components/header.tsx",
+                                            lineNumber: 77,
+                                            columnNumber: 19
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/Downloads/michigan-small-business-platform-3/components/header.tsx",
+                                    lineNumber: 75,
+                                    columnNumber: 17
                                 }, this)
-                            }, void 0, false, {
-                                fileName: "[project]/Downloads/michigan-small-business-platform-3/components/header.tsx",
-                                lineNumber: 56,
-                                columnNumber: 13
-                            }, this)
-                        ]
-                    }, void 0, true, {
+                            ]
+                        }, void 0, true) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                    href: "/login",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
+                                        variant: "ghost",
+                                        size: "sm",
+                                        className: "text-foreground/70 hover:text-foreground hover:bg-muted/50 text-sm font-medium",
+                                        children: "Login"
+                                    }, void 0, false, {
+                                        fileName: "[project]/Downloads/michigan-small-business-platform-3/components/header.tsx",
+                                        lineNumber: 90,
+                                        columnNumber: 19
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "[project]/Downloads/michigan-small-business-platform-3/components/header.tsx",
+                                    lineNumber: 89,
+                                    columnNumber: 17
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                    href: "/signup",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
+                                        size: "sm",
+                                        className: "bg-primary hover:bg-primary/90 text-white text-sm font-medium",
+                                        children: "Sign Up"
+                                    }, void 0, false, {
+                                        fileName: "[project]/Downloads/michigan-small-business-platform-3/components/header.tsx",
+                                        lineNumber: 95,
+                                        columnNumber: 19
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "[project]/Downloads/michigan-small-business-platform-3/components/header.tsx",
+                                    lineNumber: 94,
+                                    columnNumber: 17
+                                }, this)
+                            ]
+                        }, void 0, true)
+                    }, void 0, false, {
                         fileName: "[project]/Downloads/michigan-small-business-platform-3/components/header.tsx",
-                        lineNumber: 35,
+                        lineNumber: 47,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/Downloads/michigan-small-business-platform-3/components/header.tsx",
-                lineNumber: 8,
+                lineNumber: 20,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/Downloads/michigan-small-business-platform-3/components/header.tsx",
-            lineNumber: 7,
+            lineNumber: 19,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/Downloads/michigan-small-business-platform-3/components/header.tsx",
-        lineNumber: 6,
+        lineNumber: 18,
         columnNumber: 5
     }, this);
 }
+_s(Header, "6rjQqVGK4uzms4RfQ6wxJj0Vk9U=", false, function() {
+    return [
+        __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"],
+        __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$contexts$2f$auth$2d$context$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useAuth"]
+    ];
+});
 _c = Header;
 var _c;
 __turbopack_context__.k.register(_c, "Header");
@@ -722,15 +807,19 @@ __turbopack_context__.s([
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/michigan-small-business-platform-3/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/michigan-small-business-platform-3/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/michigan-small-business-platform-3/node_modules/next/navigation.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/michigan-small-business-platform-3/components/ui/button.tsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/michigan-small-business-platform-3/components/ui/card.tsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/michigan-small-business-platform-3/components/ui/input.tsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/michigan-small-business-platform-3/components/ui/select.tsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/michigan-small-business-platform-3/node_modules/next/dist/client/app-dir/link.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$header$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/michigan-small-business-platform-3/components/header.tsx [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$contexts$2f$auth$2d$context$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/michigan-small-business-platform-3/contexts/auth-context.tsx [app-client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
 "use client";
+;
+;
 ;
 ;
 ;
@@ -847,10 +936,28 @@ const talentData = [
 ];
 function TalentPage() {
     _s();
+    const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"])();
+    const { isAuthenticated } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$contexts$2f$auth$2d$context$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useAuth"])();
     const [searchQuery, setSearchQuery] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
     const [selectedService, setSelectedService] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(undefined);
     const [selectedCounty, setSelectedCounty] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(undefined);
     const [connectedProfiles, setConnectedProfiles] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])([]);
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "TalentPage.useEffect": ()=>{
+            if ("TURBOPACK compile-time truthy", 1) {
+                const currentUser = localStorage.getItem("currentUser");
+                if (!currentUser || !isAuthenticated) {
+                    router.push("/login");
+                }
+            }
+        }
+    }["TalentPage.useEffect"], [
+        isAuthenticated,
+        router
+    ]);
+    if (!isAuthenticated) {
+        return null;
+    }
     const filteredTalent = talentData.filter((talent)=>{
         const matchesSearch = talent.name.toLowerCase().includes(searchQuery.toLowerCase()) || talent.expertise.toLowerCase().includes(searchQuery.toLowerCase()) || talent.skills.some((skill)=>skill.toLowerCase().includes(searchQuery.toLowerCase()));
         const matchesService = !selectedService || selectedService === "all" || talent.serviceType === selectedService;
@@ -869,7 +976,7 @@ function TalentPage() {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$header$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Header"], {}, void 0, false, {
                 fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
-                lineNumber: 134,
+                lineNumber: 151,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -883,7 +990,7 @@ function TalentPage() {
                                 children: "Find Local Experts"
                             }, void 0, false, {
                                 fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
-                                lineNumber: 139,
+                                lineNumber: 156,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -891,13 +998,68 @@ function TalentPage() {
                                 children: "Connect with accountants, designers, consultants, and service providers in your Michigan county."
                             }, void 0, false, {
                                 fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
-                                lineNumber: 140,
+                                lineNumber: 157,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
-                        lineNumber: 138,
+                        lineNumber: 155,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Card"], {
+                        className: "mb-8 border-secondary/20 bg-secondary/5",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardHeader"], {
+                                className: "pb-3",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardTitle"], {
+                                        className: "text-lg font-semibold text-foreground",
+                                        children: "Are You a Professional or Service Provider?"
+                                    }, void 0, false, {
+                                        fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
+                                        lineNumber: 165,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardDescription"], {
+                                        className: "text-sm",
+                                        children: "Join our network and connect with rural Michigan business owners who need your skills"
+                                    }, void 0, false, {
+                                        fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
+                                        lineNumber: 166,
+                                        columnNumber: 13
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
+                                lineNumber: 164,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardContent"], {
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                    href: "/talent/create-profile",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
+                                        className: "bg-secondary hover:bg-secondary/90 text-secondary-foreground",
+                                        children: "Create a Talent Profile"
+                                    }, void 0, false, {
+                                        fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
+                                        lineNumber: 172,
+                                        columnNumber: 15
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
+                                    lineNumber: 171,
+                                    columnNumber: 13
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
+                                lineNumber: 170,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
+                        lineNumber: 163,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -910,7 +1072,7 @@ function TalentPage() {
                                         children: "Search Talent"
                                     }, void 0, false, {
                                         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
-                                        lineNumber: 148,
+                                        lineNumber: 182,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Input"], {
@@ -921,13 +1083,13 @@ function TalentPage() {
                                         className: "bg-card border-border"
                                     }, void 0, false, {
                                         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
-                                        lineNumber: 149,
+                                        lineNumber: 183,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
-                                lineNumber: 147,
+                                lineNumber: 181,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -937,7 +1099,7 @@ function TalentPage() {
                                         children: "Service Type"
                                     }, void 0, false, {
                                         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
-                                        lineNumber: 159,
+                                        lineNumber: 193,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Select"], {
@@ -950,12 +1112,12 @@ function TalentPage() {
                                                     placeholder: "All Services"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
-                                                    lineNumber: 162,
+                                                    lineNumber: 196,
                                                     columnNumber: 17
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
-                                                lineNumber: 161,
+                                                lineNumber: 195,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SelectContent"], {
@@ -965,7 +1127,7 @@ function TalentPage() {
                                                         children: "All Services"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
-                                                        lineNumber: 165,
+                                                        lineNumber: 199,
                                                         columnNumber: 17
                                                     }, this),
                                                     serviceTypes.map((service)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SelectItem"], {
@@ -973,25 +1135,25 @@ function TalentPage() {
                                                             children: service
                                                         }, service, false, {
                                                             fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
-                                                            lineNumber: 167,
+                                                            lineNumber: 201,
                                                             columnNumber: 19
                                                         }, this))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
-                                                lineNumber: 164,
+                                                lineNumber: 198,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
-                                        lineNumber: 160,
+                                        lineNumber: 194,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
-                                lineNumber: 158,
+                                lineNumber: 192,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1001,7 +1163,7 @@ function TalentPage() {
                                         children: "County"
                                     }, void 0, false, {
                                         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
-                                        lineNumber: 176,
+                                        lineNumber: 210,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Select"], {
@@ -1014,12 +1176,12 @@ function TalentPage() {
                                                     placeholder: "All Counties"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
-                                                    lineNumber: 179,
+                                                    lineNumber: 213,
                                                     columnNumber: 17
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
-                                                lineNumber: 178,
+                                                lineNumber: 212,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SelectContent"], {
@@ -1029,7 +1191,7 @@ function TalentPage() {
                                                         children: "All Counties"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
-                                                        lineNumber: 182,
+                                                        lineNumber: 216,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SelectItem"], {
@@ -1037,7 +1199,7 @@ function TalentPage() {
                                                         children: "Ionia County"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
-                                                        lineNumber: 183,
+                                                        lineNumber: 217,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SelectItem"], {
@@ -1045,7 +1207,7 @@ function TalentPage() {
                                                         children: "Gratiot County"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
-                                                        lineNumber: 184,
+                                                        lineNumber: 218,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SelectItem"], {
@@ -1053,7 +1215,7 @@ function TalentPage() {
                                                         children: "Montcalm County"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
-                                                        lineNumber: 185,
+                                                        lineNumber: 219,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SelectItem"], {
@@ -1061,7 +1223,7 @@ function TalentPage() {
                                                         children: "Shiawassee County"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
-                                                        lineNumber: 186,
+                                                        lineNumber: 220,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SelectItem"], {
@@ -1069,7 +1231,7 @@ function TalentPage() {
                                                         children: "Clinton County"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
-                                                        lineNumber: 187,
+                                                        lineNumber: 221,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SelectItem"], {
@@ -1077,7 +1239,7 @@ function TalentPage() {
                                                         children: "Eaton County"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
-                                                        lineNumber: 188,
+                                                        lineNumber: 222,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SelectItem"], {
@@ -1085,7 +1247,7 @@ function TalentPage() {
                                                         children: "Barry County"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
-                                                        lineNumber: 189,
+                                                        lineNumber: 223,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SelectItem"], {
@@ -1093,7 +1255,7 @@ function TalentPage() {
                                                         children: "Calhoun County"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
-                                                        lineNumber: 190,
+                                                        lineNumber: 224,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SelectItem"], {
@@ -1101,31 +1263,31 @@ function TalentPage() {
                                                         children: "Alpena County"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
-                                                        lineNumber: 191,
+                                                        lineNumber: 225,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
-                                                lineNumber: 181,
+                                                lineNumber: 215,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
-                                        lineNumber: 177,
+                                        lineNumber: 211,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
-                                lineNumber: 175,
+                                lineNumber: 209,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
-                        lineNumber: 146,
+                        lineNumber: 180,
                         columnNumber: 9
                     }, this),
                     filteredTalent.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1140,7 +1302,7 @@ function TalentPage() {
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
-                        lineNumber: 199,
+                        lineNumber: 233,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1154,17 +1316,17 @@ function TalentPage() {
                                     children: "No professionals found matching your criteria. Try adjusting your filters."
                                 }, void 0, false, {
                                     fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
-                                    lineNumber: 211,
+                                    lineNumber: 245,
                                     columnNumber: 17
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
-                                lineNumber: 210,
+                                lineNumber: 244,
                                 columnNumber: 15
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
-                            lineNumber: 209,
+                            lineNumber: 243,
                             columnNumber: 13
                         }, this) : filteredTalent.map((talent)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Card"], {
                                 className: "border-border hover:shadow-md transition-shadow flex flex-col",
@@ -1180,7 +1342,7 @@ function TalentPage() {
                                                             children: talent.name
                                                         }, void 0, false, {
                                                             fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
-                                                            lineNumber: 222,
+                                                            lineNumber: 256,
                                                             columnNumber: 23
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardDescription"], {
@@ -1188,13 +1350,13 @@ function TalentPage() {
                                                             children: talent.serviceType
                                                         }, void 0, false, {
                                                             fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
-                                                            lineNumber: 223,
+                                                            lineNumber: 257,
                                                             columnNumber: 23
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
-                                                    lineNumber: 221,
+                                                    lineNumber: 255,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1204,23 +1366,23 @@ function TalentPage() {
                                                         children: "👤"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
-                                                        lineNumber: 226,
+                                                        lineNumber: 260,
                                                         columnNumber: 23
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
-                                                    lineNumber: 225,
+                                                    lineNumber: 259,
                                                     columnNumber: 21
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
-                                            lineNumber: 220,
+                                            lineNumber: 254,
                                             columnNumber: 19
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
-                                        lineNumber: 219,
+                                        lineNumber: 253,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardContent"], {
@@ -1234,7 +1396,7 @@ function TalentPage() {
                                                         children: talent.expertise
                                                     }, void 0, false, {
                                                         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
-                                                        lineNumber: 232,
+                                                        lineNumber: 266,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1245,7 +1407,7 @@ function TalentPage() {
                                                                 children: "Skills"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
-                                                                lineNumber: 234,
+                                                                lineNumber: 268,
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1255,24 +1417,24 @@ function TalentPage() {
                                                                         children: skill
                                                                     }, skill, false, {
                                                                         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
-                                                                        lineNumber: 237,
+                                                                        lineNumber: 271,
                                                                         columnNumber: 27
                                                                     }, this))
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
-                                                                lineNumber: 235,
+                                                                lineNumber: 269,
                                                                 columnNumber: 23
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
-                                                        lineNumber: 233,
+                                                        lineNumber: 267,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
-                                                lineNumber: 231,
+                                                lineNumber: 265,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1286,7 +1448,7 @@ function TalentPage() {
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
-                                                        lineNumber: 249,
+                                                        lineNumber: 283,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1298,7 +1460,7 @@ function TalentPage() {
                                                                 children: connectedProfiles.includes(talent.id) ? "✓ Connected" : "Connect"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
-                                                                lineNumber: 251,
+                                                                lineNumber: 285,
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -1308,36 +1470,36 @@ function TalentPage() {
                                                                 children: "Message"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
-                                                                lineNumber: 261,
+                                                                lineNumber: 295,
                                                                 columnNumber: 23
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
-                                                        lineNumber: 250,
+                                                        lineNumber: 284,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
-                                                lineNumber: 248,
+                                                lineNumber: 282,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
-                                        lineNumber: 230,
+                                        lineNumber: 264,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, talent.id, true, {
                                 fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
-                                lineNumber: 218,
+                                lineNumber: 252,
                                 columnNumber: 15
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
-                        lineNumber: 207,
+                        lineNumber: 241,
                         columnNumber: 9
                     }, this),
                     connectedProfiles.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Card"], {
@@ -1355,20 +1517,20 @@ function TalentPage() {
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
-                                        lineNumber: 276,
+                                        lineNumber: 310,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardDescription"], {
                                         children: "You can view and manage your connections in your dashboard"
                                     }, void 0, false, {
                                         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
-                                        lineNumber: 279,
+                                        lineNumber: 313,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
-                                lineNumber: 275,
+                                lineNumber: 309,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardContent"], {
@@ -1379,92 +1541,44 @@ function TalentPage() {
                                         children: "View My Connections"
                                     }, void 0, false, {
                                         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
-                                        lineNumber: 283,
+                                        lineNumber: 317,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
-                                    lineNumber: 282,
+                                    lineNumber: 316,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
-                                lineNumber: 281,
+                                lineNumber: 315,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
-                        lineNumber: 274,
+                        lineNumber: 308,
                         columnNumber: 11
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Card"], {
-                        className: "mt-8 border-secondary/20 bg-secondary/5",
-                        children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardHeader"], {
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardTitle"], {
-                                        className: "text-foreground",
-                                        children: "Are You a Professional or Service Provider?"
-                                    }, void 0, false, {
-                                        fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
-                                        lineNumber: 292,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardDescription"], {
-                                        children: "Join our network and connect with rural Michigan business owners who need your skills"
-                                    }, void 0, false, {
-                                        fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
-                                        lineNumber: 293,
-                                        columnNumber: 13
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
-                                lineNumber: 291,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardContent"], {
-                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                    href: "/talent/create-profile",
-                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
-                                        className: "bg-secondary hover:bg-secondary/90 text-secondary-foreground",
-                                        children: "Create a Talent Profile"
-                                    }, void 0, false, {
-                                        fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
-                                        lineNumber: 299,
-                                        columnNumber: 15
-                                    }, this)
-                                }, void 0, false, {
-                                    fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
-                                    lineNumber: 298,
-                                    columnNumber: 13
-                                }, this)
-                            }, void 0, false, {
-                                fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
-                                lineNumber: 297,
-                                columnNumber: 11
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
-                        lineNumber: 290,
-                        columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
-                lineNumber: 137,
+                lineNumber: 154,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/Downloads/michigan-small-business-platform-3/app/talent/page.tsx",
-        lineNumber: 133,
+        lineNumber: 150,
         columnNumber: 5
     }, this);
 }
-_s(TalentPage, "VL1IgYKhvc62r+mOnEs2Rw1BxXQ=");
+_s(TalentPage, "nqedG07XsGxu26x6JOaCu+D08AI=", false, function() {
+    return [
+        __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"],
+        __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$michigan$2d$small$2d$business$2d$platform$2d$3$2f$contexts$2f$auth$2d$context$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useAuth"]
+    ];
+});
 _c = TalentPage;
 var _c;
 __turbopack_context__.k.register(_c, "TalentPage");

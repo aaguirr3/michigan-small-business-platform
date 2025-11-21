@@ -1,6 +1,7 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
+import { useRouter } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
@@ -12,6 +13,7 @@ import {
   SelectValue,
 } from "@/components/ui/select"
 import { Header } from "@/components/header"
+import { useAuth } from "@/contexts/auth-context"
 import { Checkbox } from "@/components/ui/checkbox"
 
 interface BusinessFormationPlan {
@@ -41,6 +43,8 @@ interface ChecklistItem {
 }
 
 export default function BusinessFormationPage() {
+  const router = useRouter()
+  const { isAuthenticated } = useAuth()
   const [businessIdea, setBusinessIdea] = useState("")
   const [businessName, setBusinessName] = useState("")
   const [location, setLocation] = useState("")
@@ -48,6 +52,19 @@ export default function BusinessFormationPage() {
   const [isGenerating, setIsGenerating] = useState(false)
   const [formationPlan, setFormationPlan] = useState<BusinessFormationPlan | null>(null)
   const [checklist, setChecklist] = useState<ChecklistItem[]>([])
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const currentUser = localStorage.getItem("currentUser")
+      if (!currentUser || !isAuthenticated) {
+        router.push("/login")
+      }
+    }
+  }, [isAuthenticated, router])
+
+  if (!isAuthenticated) {
+    return null
+  }
 
   const handleGeneratePlan = async (e: React.FormEvent) => {
     e.preventDefault()

@@ -2,19 +2,36 @@
 
 import type React from "react"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
+import { useRouter } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import Link from "next/link"
+import { useAuth } from "@/contexts/auth-context"
 
 export default function CreateTalentProfile() {
+  const router = useRouter()
+  const { isAuthenticated } = useAuth()
   const [formData, setFormData] = useState({
     serviceType: "",
     skills: "",
     expertise: "",
     isAvailable: true,
   })
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const currentUser = localStorage.getItem("currentUser")
+      if (!currentUser || !isAuthenticated) {
+        router.push("/login")
+      }
+    }
+  }, [isAuthenticated, router])
+
+  if (!isAuthenticated) {
+    return null
+  }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value, type } = e.target

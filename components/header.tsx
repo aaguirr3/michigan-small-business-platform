@@ -1,7 +1,19 @@
+"use client"
+
 import Link from "next/link"
+import { useRouter } from "next/navigation"
 import { Button } from "@/components/ui/button"
+import { useAuth } from "@/contexts/auth-context"
 
 export function Header() {
+  const router = useRouter()
+  const { user, logout, isAuthenticated } = useAuth()
+
+  const handleLogout = () => {
+    logout()
+    router.push("/")
+  }
+
   return (
     <nav className="border-b border-border/50 bg-white/95 backdrop-blur-sm sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
@@ -33,31 +45,59 @@ export function Header() {
           </Link>
 
           <div className="flex items-center gap-1 sm:gap-1">
-            <Link href="/dashboard">
-              <Button variant="ghost" size="sm" className="text-foreground/70 hover:text-foreground hover:bg-muted/50 text-sm font-medium">
-                Dashboard
-              </Button>
-            </Link>
-            <Link href="/grants">
-              <Button variant="ghost" size="sm" className="text-foreground/70 hover:text-foreground hover:bg-muted/50 text-sm font-medium">
-                Find Grants
-              </Button>
-            </Link>
-            <Link href="/compliance">
-              <Button variant="ghost" size="sm" className="text-foreground/70 hover:text-foreground hover:bg-muted/50 text-sm font-medium">
-                AI Compliance
-              </Button>
-            </Link>
-            <Link href="/talent">
-              <Button variant="ghost" size="sm" className="text-foreground/70 hover:text-foreground hover:bg-muted/50 text-sm font-medium">
-                Talent Connect
-              </Button>
-            </Link>
-            <Link href="/business-formation">
-              <Button size="sm" className="bg-primary hover:bg-primary/90 text-white text-sm font-medium">
-                Start Your Business
-              </Button>
-            </Link>
+            {isAuthenticated ? (
+              <>
+                <Link href="/dashboard">
+                  <Button variant="ghost" size="sm" className="text-foreground/70 hover:text-foreground hover:bg-muted/50 text-sm font-medium">
+                    Dashboard
+                  </Button>
+                </Link>
+                <Link href="/grants">
+                  <Button variant="ghost" size="sm" className="text-foreground/70 hover:text-foreground hover:bg-muted/50 text-sm font-medium">
+                    Find Grants
+                  </Button>
+                </Link>
+                <Link href="/compliance">
+                  <Button variant="ghost" size="sm" className="text-foreground/70 hover:text-foreground hover:bg-muted/50 text-sm font-medium">
+                    AI Compliance
+                  </Button>
+                </Link>
+                <Link href="/talent">
+                  <Button variant="ghost" size="sm" className="text-foreground/70 hover:text-foreground hover:bg-muted/50 text-sm font-medium">
+                    Talent Connect
+                  </Button>
+                </Link>
+                <Link href="/business-formation">
+                  <Button size="sm" className="bg-primary hover:bg-primary/90 text-white text-sm font-medium">
+                    Start Your Business
+                  </Button>
+                </Link>
+                <div className="flex items-center gap-2 ml-2 pl-2 border-l border-border/50">
+                  <span className="text-sm text-foreground/70 hidden sm:inline">{user?.name}</span>
+                  <Button 
+                    variant="ghost" 
+                    size="sm" 
+                    onClick={handleLogout}
+                    className="text-foreground/70 hover:text-foreground hover:bg-muted/50 text-sm font-medium"
+                  >
+                    Logout
+                  </Button>
+                </div>
+              </>
+            ) : (
+              <>
+                <Link href="/login">
+                  <Button variant="ghost" size="sm" className="text-foreground/70 hover:text-foreground hover:bg-muted/50 text-sm font-medium">
+                    Login
+                  </Button>
+                </Link>
+                <Link href="/signup">
+                  <Button size="sm" className="bg-primary hover:bg-primary/90 text-white text-sm font-medium">
+                    Sign Up
+                  </Button>
+                </Link>
+              </>
+            )}
           </div>
         </div>
       </div>

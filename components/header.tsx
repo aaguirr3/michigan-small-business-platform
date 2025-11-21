@@ -9,9 +9,12 @@ export function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 flex-shrink-0">
             <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-white font-bold text-sm">
-              MI
+              ML
             </div>
-            <h1 className="text-lg font-bold text-foreground hidden sm:inline">Michigan Rural Network</h1>
+            <div className="hidden sm:inline">
+              <h1 className="text-lg font-bold text-foreground">MittenLaunch</h1>
+              <p className="text-xs text-muted-foreground">Helping small businesses grow across the Mitten.</p>
+            </div>
           </Link>
 
           <div className="flex items-center gap-1 sm:gap-2">

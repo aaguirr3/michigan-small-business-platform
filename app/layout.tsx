@@ -8,8 +8,9 @@ const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Michigan Rural Small Business Network",
-  description: "Connect with grants, funding, compliance help, and local talent in rural Michigan",
+  title: "MittenLaunch | Helping small businesses grow across the Mitten",
+  description:
+    "MittenLaunch connects Michigan small businesses with grants, funding, compliance help, and local talent.",
   generator: "v0.app",
   icons: {
     icon: [

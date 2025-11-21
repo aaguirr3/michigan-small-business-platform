@@ -1,0 +1,265 @@
+"use client"
+
+import { useState } from "react"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Input } from "@/components/ui/input"
+import Link from "next/link"
+import { Header } from "@/components/header"
+
+interface TalentProfile {
+  id: number
+  name: string
+  serviceType: string
+  skills: string[]
+  expertise: string
+  location: string
+  isAvailable: boolean
+  isConnected?: boolean
+}
+
+// Sample talent data - in production this would come from API
+const talentData: TalentProfile[] = [
+  {
+    id: 1,
+    name: "Sarah Chen",
+    serviceType: "Accounting",
+    skills: ["Tax Planning", "Bookkeeping", "Financial Analysis"],
+    expertise: "CPA with 15 years experience in agricultural accounting and tax strategy for rural businesses",
+    location: "Shiawassee County",
+    isAvailable: true,
+  },
+  {
+    id: 2,
+    name: "Marcus Johnson",
+    serviceType: "Web Design",
+    skills: ["Web Design", "Graphic Design", "Social Media"],
+    expertise: "Freelance designer helping small businesses build online presence",
+    location: "Gratiot County",
+    isAvailable: true,
+  },
+  {
+    id: 3,
+    name: "Elena Rodriguez",
+    serviceType: "Business Consulting",
+    skills: ["Strategic Planning", "Workforce Development", "Operations"],
+    expertise: "Former manufacturing manager now consulting for business growth and efficiency",
+    location: "Montcalm County",
+    isAvailable: true,
+  },
+  {
+    id: 4,
+    name: "Tom Peterson",
+    serviceType: "Equipment Repair",
+    skills: ["Farm Equipment", "Maintenance", "Troubleshooting"],
+    expertise: "Licensed equipment technician serving rural area farms",
+    location: "Ionia County",
+    isAvailable: true,
+  },
+  {
+    id: 5,
+    name: "Jessica Williams",
+    serviceType: "Marketing",
+    skills: ["Digital Marketing", "Content Creation", "Brand Strategy"],
+    expertise: "Marketing specialist focused on rural and agricultural businesses",
+    location: "Clinton County",
+    isAvailable: true,
+  },
+  {
+    id: 6,
+    name: "David Kumar",
+    serviceType: "Legal Services",
+    skills: ["Business Law", "Contracts", "Compliance"],
+    expertise: "Attorney specializing in agricultural law and small business legal structures",
+    location: "Eaton County",
+    isAvailable: true,
+  },
+  {
+    id: 7,
+    name: "Patricia Brown",
+    serviceType: "Financial Planning",
+    skills: ["Financing", "Loan Structuring", "Financial Planning"],
+    expertise: "Commercial loan officer with expertise in farm and rural business financing",
+    location: "Barry County",
+    isAvailable: true,
+  },
+  {
+    id: 8,
+    name: "Alex Thompson",
+    serviceType: "IT Services",
+    skills: ["Network Setup", "Cybersecurity", "IT Support"],
+    expertise: "Technology consultant helping rural businesses upgrade infrastructure",
+    location: "Calhoun County",
+    isAvailable: true,
+  },
+]
+
+export default function TalentPage() {
+  const [searchQuery, setSearchQuery] = useState("")
+  const [selectedService, setSelectedService] = useState("")
+  const [connectedProfiles, setConnectedProfiles] = useState<number[]>([])
+
+  const filteredTalent = talentData.filter((talent) => {
+    const matchesSearch =
+      talent.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      talent.expertise.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      talent.skills.some((skill) => skill.toLowerCase().includes(searchQuery.toLowerCase()))
+    const matchesService = !selectedService || talent.serviceType === selectedService
+
+    return matchesSearch && matchesService
+  })
+
+  const toggleConnection = (talentId: number) => {
+    setConnectedProfiles((prev) =>
+      prev.includes(talentId) ? prev.filter((id) => id !== talentId) : [...prev, talentId],
+    )
+  }
+
+  const serviceTypes = Array.from(new Set(talentData.map((t) => t.serviceType)))
+
+  return (
+    <div className="min-h-screen bg-background">
+      <Header />
+
+      {/* Main Content */}
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="mb-8">
+          <h1 className="text-4xl font-bold text-foreground mb-2">Local Talent Network</h1>
+          <p className="text-foreground/70">
+            Connect with skilled professionals and service providers in your rural Michigan community
+          </p>
+        </div>
+
+        {/* Filters */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+          <div>
+            <label className="block text-sm font-medium text-foreground mb-2">Search Talent</label>
+            <Input
+              type="text"
+              placeholder="Search by name, skill, or expertise"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="bg-card border-border"
+            />
+          </div>
+
+          <div>
+            <label className="block text-sm font-medium text-foreground mb-2">Service Type</label>
+            <select
+              value={selectedService}
+              onChange={(e) => setSelectedService(e.target.value)}
+              className="w-full px-3 py-2 border border-border rounded-lg bg-card text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+            >
+              <option value="">All Services</option>
+              {serviceTypes.map((service) => (
+                <option key={service} value={service}>
+                  {service}
+                </option>
+              ))}
+            </select>
+          </div>
+        </div>
+
+        {/* Talent Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+          {filteredTalent.length === 0 ? (
+            <Card className="border-border md:col-span-2">
+              <CardContent className="py-12 text-center">
+                <p className="text-foreground/70">
+                  No professionals found matching your criteria. Try adjusting your filters.
+                </p>
+              </CardContent>
+            </Card>
+          ) : (
+            filteredTalent.map((talent) => (
+              <Card key={talent.id} className="border-border hover:shadow-md transition-shadow flex flex-col">
+                <CardHeader>
+                  <div className="flex items-start justify-between gap-4">
+                    <div>
+                      <CardTitle className="text-foreground text-xl">{talent.name}</CardTitle>
+                      <CardDescription className="text-sm mt-1">{talent.serviceType}</CardDescription>
+                    </div>
+                    <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center">
+                      <span className="text-lg">👤</span>
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent className="flex-1 flex flex-col">
+                  <div className="mb-4 flex-1">
+                    <p className="text-sm text-foreground leading-relaxed mb-4">{talent.expertise}</p>
+                    <div className="mb-4">
+                      <p className="text-xs font-medium text-foreground/60 mb-2">Skills</p>
+                      <div className="flex flex-wrap gap-2">
+                        {talent.skills.map((skill) => (
+                          <span
+                            key={skill}
+                            className="px-2 py-1 bg-primary/20 text-primary rounded text-xs font-medium"
+                          >
+                            {skill}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="border-t border-border pt-4">
+                    <p className="text-xs text-foreground/60 mb-3">📍 {talent.location}</p>
+                    <div className="flex gap-2">
+                      <button
+                        onClick={() => toggleConnection(talent.id)}
+                        className={`flex-1 px-3 py-2 rounded-lg font-medium transition-colors text-sm ${
+                          connectedProfiles.includes(talent.id)
+                            ? "bg-primary text-primary-foreground"
+                            : "bg-muted text-foreground hover:bg-muted/80"
+                        }`}
+                      >
+                        {connectedProfiles.includes(talent.id) ? "✓ Connected" : "Connect"}
+                      </button>
+                      <Button variant="outline" size="sm" className="flex-1 bg-transparent">
+                        Message
+                      </Button>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))
+          )}
+        </div>
+
+        {/* Connections Summary */}
+        {connectedProfiles.length > 0 && (
+          <Card className="border-primary/20 bg-primary/5">
+            <CardHeader>
+              <CardTitle className="text-foreground">
+                {connectedProfiles.length} Professional{connectedProfiles.length !== 1 ? "s" : ""} Connected
+              </CardTitle>
+              <CardDescription>You can view and manage your connections in your dashboard</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <Link href="/dashboard">
+                <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">View My Connections</Button>
+              </Link>
+            </CardContent>
+          </Card>
+        )}
+
+        {/* Become a Provider Section */}
+        <Card className="mt-8 border-secondary/20 bg-secondary/5">
+          <CardHeader>
+            <CardTitle className="text-foreground">Are You a Professional or Service Provider?</CardTitle>
+            <CardDescription>
+              Join our network and connect with rural Michigan business owners who need your skills
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <Link href="/talent/create-profile">
+              <Button className="bg-secondary hover:bg-secondary/90 text-secondary-foreground">
+                Create a Talent Profile
+              </Button>
+            </Link>
+          </CardContent>
+        </Card>
+      </div>
+    </div>
+  )
+}

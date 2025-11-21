@@ -1,0 +1,18 @@
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Clean Simple Mitten -->
+  <path d="M20 6C14 6 10 10 8 16L6 30C6 34 8 36 12 36H28C32 36 34 34 34 30L32 16C30 10 26 6 20 6Z" 
+        fill="currentColor" 
+        fill-opacity="0.1"/>
+  <path d="M20 6C14 6 10 10 8 16L6 30C6 34 8 36 12 36H28C32 36 34 34 34 30L32 16C30 10 26 6 20 6Z" 
+        stroke="currentColor" 
+        stroke-width="2.5" 
+        stroke-linecap="round" 
+        stroke-linejoin="round"/>
+  <!-- Thumb -->
+  <path d="M8 16C8 13 10 11 13 11C16 11 18 13 18 16" 
+        stroke="currentColor" 
+        stroke-width="2.5" 
+        stroke-linecap="round" 
+        stroke-linejoin="round"/>
+</svg>
+

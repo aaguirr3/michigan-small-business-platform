@@ -1,0 +1,24 @@
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Simple Michigan Mitten Logo -->
+  <path d="M20 8C16 8 12 10 10 14L8 28C8 32 10 34 14 34H26C30 34 32 32 32 28L30 14C28 10 24 8 20 8Z" 
+        fill="currentColor" 
+        fill-opacity="0.1"/>
+  <path d="M20 8C16 8 12 10 10 14L8 28C8 32 10 34 14 34H26C30 34 32 32 32 28L30 14C28 10 24 8 20 8Z" 
+        stroke="currentColor" 
+        stroke-width="2" 
+        stroke-linecap="round" 
+        stroke-linejoin="round"/>
+  <!-- Thumb -->
+  <path d="M10 14C10 12 12 10 14 10C16 10 18 12 18 14" 
+        stroke="currentColor" 
+        stroke-width="2" 
+        stroke-linecap="round" 
+        stroke-linejoin="round"/>
+  <!-- Small growth arrow inside -->
+  <path d="M20 18L24 22M20 18L16 22M20 18V26" 
+        stroke="currentColor" 
+        stroke-width="1.5" 
+        stroke-linecap="round" 
+        stroke-linejoin="round"/>
+</svg>
+

@@ -1,10 +1,14 @@
+"use client"
+
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Header } from "@/components/header"
+import { useAuth } from "@/contexts/auth-context"
 
 export default function Home() {
+  const { isAuthenticated } = useAuth()
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -22,16 +26,33 @@ export default function Home() {
                 Everything you need to launch and scale your business in Michigan. Find funding, handle permits, and connect with local experts—all in one place.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 pt-2">
-                <Link href="/dashboard">
-                  <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8 py-6 text-base font-medium">
-                    Get Started Free
-                  </Button>
-                </Link>
-                <Link href="/grants">
-                  <Button size="lg" variant="outline" className="px-8 py-6 text-base font-medium border-2">
-                    Browse Grants
-                  </Button>
-                </Link>
+                {isAuthenticated ? (
+                  <>
+                    <Link href="/dashboard">
+                      <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8 py-6 text-base font-medium">
+                        Go to Dashboard
+                      </Button>
+                    </Link>
+                    <Link href="/grants">
+                      <Button size="lg" variant="outline" className="px-8 py-6 text-base font-medium border-2">
+                        Browse Grants
+                      </Button>
+                    </Link>
+                  </>
+                ) : (
+                  <>
+                    <Link href="/signup">
+                      <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8 py-6 text-base font-medium">
+                        Get Started Free
+                      </Button>
+                    </Link>
+                    <Link href="/login">
+                      <Button size="lg" variant="outline" className="px-8 py-6 text-base font-medium border-2">
+                        Sign In
+                      </Button>
+                    </Link>
+                  </>
+                )}
               </div>
             </div>
 
@@ -49,18 +70,19 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Features Grid */}
-      <section className="py-20 sm:py-28 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-4">
-              Everything You Need to Launch
-            </h2>
-            <p className="text-xl text-foreground/60 max-w-2xl mx-auto">
-              Four powerful tools to help you start, fund, and grow your Michigan business
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {/* Features Grid - Only show when authenticated */}
+      {isAuthenticated && (
+        <section className="py-20 sm:py-28 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-4">
+                Everything You Need to Launch
+              </h2>
+              <p className="text-xl text-foreground/60 max-w-2xl mx-auto">
+                Four powerful tools to help you start, fund, and grow your Michigan business
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Grants Card */}
             <Card className="border border-border/50 bg-white hover:border-primary/30 transition-all card-shadow hover:card-shadow-hover">
               <CardHeader className="pb-4">
@@ -183,6 +205,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      )}
 
       {/* CTA Section */}
       <section className="py-20 bg-white border-t border-border/50">
@@ -192,16 +215,33 @@ export default function Home() {
             Join Michigan entrepreneurs who are starting and growing their businesses with our free tools.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/dashboard">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8 py-6 text-base font-medium">
-                Go to Dashboard
-              </Button>
-            </Link>
-            <Link href="/business-formation">
-              <Button size="lg" variant="outline" className="px-8 py-6 text-base font-medium border-2">
-                Start Formation Guide
-              </Button>
-            </Link>
+            {isAuthenticated ? (
+              <>
+                <Link href="/dashboard">
+                  <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8 py-6 text-base font-medium">
+                    Go to Dashboard
+                  </Button>
+                </Link>
+                <Link href="/business-formation">
+                  <Button size="lg" variant="outline" className="px-8 py-6 text-base font-medium border-2">
+                    Start Formation Guide
+                  </Button>
+                </Link>
+              </>
+            ) : (
+              <>
+                <Link href="/signup">
+                  <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8 py-6 text-base font-medium">
+                    Get Started Free
+                  </Button>
+                </Link>
+                <Link href="/login">
+                  <Button size="lg" variant="outline" className="px-8 py-6 text-base font-medium border-2">
+                    Sign In
+                  </Button>
+                </Link>
+              </>
+            )}
           </div>
         </div>
       </section>

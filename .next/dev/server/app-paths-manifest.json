@@ -4,6 +4,9 @@
   "/compliance/page": "app/compliance/page.js",
   "/dashboard/page": "app/dashboard/page.js",
   "/grants/page": "app/grants/page.js",
+  "/login/page": "app/login/page.js",
   "/page": "app/page.js",
+  "/signup/page": "app/signup/page.js",
+  "/talent/create-profile/page": "app/talent/create-profile/page.js",
   "/talent/page": "app/talent/page.js"
 }

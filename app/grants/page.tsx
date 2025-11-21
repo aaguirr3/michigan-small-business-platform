@@ -1,6 +1,7 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
+import { useRouter } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
@@ -13,6 +14,7 @@ import {
 } from "@/components/ui/select"
 import Link from "next/link"
 import { Header } from "@/components/header"
+import { useAuth } from "@/contexts/auth-context"
 import grantsData from "@/data/grants.json"
 
 interface Grant {
@@ -33,6 +35,8 @@ interface Grant {
 }
 
 export default function GrantsPage() {
+  const router = useRouter()
+  const { isAuthenticated, user } = useAuth()
   const [searchQuery, setSearchQuery] = useState("")
   const [selectedIndustry, setSelectedIndustry] = useState<string | undefined>(undefined)
   const [selectedSize, setSelectedSize] = useState<string | undefined>(undefined)
@@ -41,6 +45,35 @@ export default function GrantsPage() {
   const [savedGrants, setSavedGrants] = useState<number[]>([])
   const [expandedGrant, setExpandedGrant] = useState<number | null>(null)
   const [aiSummary, setAiSummary] = useState<Record<number, string>>({})
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const currentUser = localStorage.getItem("currentUser")
+      if (!currentUser || !isAuthenticated) {
+        router.push("/login")
+      } else {
+        // Load saved grants for current user
+        const userData = JSON.parse(currentUser)
+        const savedGrantsKey = `savedGrants_${userData.email}`
+        const saved = localStorage.getItem(savedGrantsKey)
+        if (saved) {
+          setSavedGrants(JSON.parse(saved))
+        }
+      }
+    }
+  }, [isAuthenticated, router, user])
+
+  // Save to localStorage whenever savedGrants changes
+  useEffect(() => {
+    if (typeof window !== "undefined" && isAuthenticated && user) {
+      const savedGrantsKey = `savedGrants_${user.email}`
+      localStorage.setItem(savedGrantsKey, JSON.stringify(savedGrants))
+    }
+  }, [savedGrants, isAuthenticated, user])
+
+  if (!isAuthenticated) {
+    return null
+  }
 
   const grants = grantsData as Grant[]
 

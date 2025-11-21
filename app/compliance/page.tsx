@@ -2,7 +2,8 @@
 
 import type React from "react"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
+import { useRouter } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import {
@@ -13,6 +14,7 @@ import {
   SelectValue,
 } from "@/components/ui/select"
 import { Header } from "@/components/header"
+import { useAuth } from "@/contexts/auth-context"
 
 interface ComplianceResponse {
   id: string
@@ -36,6 +38,8 @@ interface PermitAnalysis {
 }
 
 export default function CompliancePage() {
+  const router = useRouter()
+  const { isAuthenticated } = useAuth()
   const [activeTab, setActiveTab] = useState<"qa" | "permit">("qa")
   const [question, setQuestion] = useState("")
   const [category, setCategory] = useState("general")
@@ -43,6 +47,19 @@ export default function CompliancePage() {
   const [responses, setResponses] = useState<ComplianceResponse[]>([])
   const [showDocUpload, setShowDocUpload] = useState(false)
   const [uploadedFile, setUploadedFile] = useState<string | null>(null)
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const currentUser = localStorage.getItem("currentUser")
+      if (!currentUser || !isAuthenticated) {
+        router.push("/login")
+      }
+    }
+  }, [isAuthenticated, router])
+
+  if (!isAuthenticated) {
+    return null
+  }
   
   // Permit Checker State
   const [businessIdea, setBusinessIdea] = useState("")

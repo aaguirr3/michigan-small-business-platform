@@ -21,6 +21,8 @@ interface ParamMap {
   "/compliance": {}
   "/dashboard": {}
   "/grants": {}
+  "/login": {}
+  "/signup": {}
   "/talent": {}
   "/talent/create-profile": {}
 }

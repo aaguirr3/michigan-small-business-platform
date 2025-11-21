@@ -1,6 +1,7 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
+import { useRouter } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
@@ -13,6 +14,7 @@ import {
 } from "@/components/ui/select"
 import Link from "next/link"
 import { Header } from "@/components/header"
+import { useAuth } from "@/contexts/auth-context"
 
 interface TalentProfile {
   id: number
@@ -102,10 +104,25 @@ const talentData: TalentProfile[] = [
 ]
 
 export default function TalentPage() {
+  const router = useRouter()
+  const { isAuthenticated } = useAuth()
   const [searchQuery, setSearchQuery] = useState("")
   const [selectedService, setSelectedService] = useState<string | undefined>(undefined)
   const [selectedCounty, setSelectedCounty] = useState<string | undefined>(undefined)
   const [connectedProfiles, setConnectedProfiles] = useState<number[]>([])
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const currentUser = localStorage.getItem("currentUser")
+      if (!currentUser || !isAuthenticated) {
+        router.push("/login")
+      }
+    }
+  }, [isAuthenticated, router])
+
+  if (!isAuthenticated) {
+    return null
+  }
 
   const filteredTalent = talentData.filter((talent) => {
     const matchesSearch =
@@ -141,6 +158,23 @@ export default function TalentPage() {
             Connect with accountants, designers, consultants, and service providers in your Michigan county.
           </p>
         </div>
+
+        {/* Become a Provider Section - Full Width */}
+        <Card className="mb-8 border-secondary/20 bg-secondary/5">
+          <CardHeader className="pb-3">
+            <CardTitle className="text-lg font-semibold text-foreground">Are You a Professional or Service Provider?</CardTitle>
+            <CardDescription className="text-sm">
+              Join our network and connect with rural Michigan business owners who need your skills
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <Link href="/talent/create-profile">
+              <Button className="bg-secondary hover:bg-secondary/90 text-secondary-foreground">
+                Create a Talent Profile
+              </Button>
+            </Link>
+          </CardContent>
+        </Card>
 
         {/* Filters */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
@@ -285,23 +319,6 @@ export default function TalentPage() {
             </CardContent>
           </Card>
         )}
-
-        {/* Become a Provider Section */}
-        <Card className="mt-8 border-secondary/20 bg-secondary/5">
-          <CardHeader>
-            <CardTitle className="text-foreground">Are You a Professional or Service Provider?</CardTitle>
-            <CardDescription>
-              Join our network and connect with rural Michigan business owners who need your skills
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            <Link href="/talent/create-profile">
-              <Button className="bg-secondary hover:bg-secondary/90 text-secondary-foreground">
-                Create a Talent Profile
-              </Button>
-            </Link>
-          </CardContent>
-        </Card>
       </div>
     </div>
   )

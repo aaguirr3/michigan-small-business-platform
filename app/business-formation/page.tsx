@@ -62,6 +62,8 @@ export default function BusinessFormationPage() {
     }
   }, [isAuthenticated, router])
 
+
+
   if (!isAuthenticated) {
     return null
   }
@@ -72,10 +74,50 @@ export default function BusinessFormationPage() {
 
     setIsGenerating(true)
 
-    // Generate AI-powered business formation plan
-    const plan = generateFormationPlan(businessIdea, businessName, location, businessType)
-    setFormationPlan(plan)
-    setChecklist(plan.checklist)
+    try {
+      // Call Watson AI API for business formation plan
+      const response = await fetch('/api/business-formation', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          businessIdea: businessIdea,
+          businessName: businessName,
+          location: location,
+          businessType: businessType,
+        }),
+      })
+
+      const data = await response.json()
+
+      console.log('Watson AI Formation Response:', {
+        ok: response.ok,
+        status: response.status,
+        fallback: data.fallback,
+        hasError: !!data.error,
+      })
+
+      if (!response.ok || data.error) {
+        console.error('Watson AI Error:', data.error)
+        // Fall back to static plan if API fails
+        const plan = generateFormationPlan(businessIdea, businessName, location, businessType)
+        setFormationPlan(plan)
+        setChecklist(plan.checklist)
+      } else {
+        // Parse the AI-generated plan
+        const plan = parseAIPlan(data.plan, businessIdea, businessName, location, businessType)
+        setFormationPlan(plan)
+        setChecklist(plan.checklist)
+      }
+    } catch (error) {
+      console.error('Failed to generate plan:', error)
+      // Fall back to static plan on error
+      const plan = generateFormationPlan(businessIdea, businessName, location, businessType)
+      setFormationPlan(plan)
+      setChecklist(plan.checklist)
+    }
+
     setIsGenerating(false)
   }
 
@@ -233,6 +275,150 @@ A DBA (also called "Assumed Name") lets you operate under a name different from 
       { id: "10", task: "Get business insurance", completed: false, category: "Insurance" },
       { id: "11", task: "Set up business website/online presence", completed: false, category: "Marketing" },
       { id: "12", task: "Register domain name (if applicable)", completed: false, category: "Marketing" },
+    ]
+
+    return {
+      businessType: recommendedType,
+      businessName: name,
+      location: loc || "Michigan",
+      steps,
+      einGuidance,
+      llcGuidance,
+      dbaGuidance,
+      costs,
+      checklist,
+    }
+  }
+
+  const parseAIPlan = (
+    aiText: string,
+    idea: string,
+    name: string,
+    loc: string,
+    type: string | undefined
+  ): BusinessFormationPlan => {
+    // Extract business type recommendation from AI response
+    const businessTypeMatch = aiText.match(/(?:recommend|suggest|form|structure).*?(LLC|Corporation|Sole Proprietorship|Partnership)/i)
+    const recommendedType = businessTypeMatch ? businessTypeMatch[1] : (type || "LLC")
+
+    // Parse steps from AI response - look for numbered lists or step patterns
+    const stepMatches = aiText.match(/(?:Step \d+|^\d+\.|^\d+\))(.*?)(?=(?:Step \d+|^\d+\.|^\d+\)|$))/gim)
+
+    let steps: FormationStep[] = []
+    if (stepMatches && stepMatches.length > 0) {
+      steps = stepMatches.slice(0, 8).map((step, index) => {
+        const cleanStep = step.replace(/^(?:Step \d+|^\d+\.|^\d+\))[:\s]*/i, '').trim()
+        const lines = cleanStep.split('\n').filter(l => l.trim())
+        const title = lines[0]?.substring(0, 100) || `Step ${index + 1}`
+        const description = lines.slice(1).join(' ').substring(0, 300) || cleanStep.substring(0, 300)
+
+        return {
+          id: index + 1,
+          title: title,
+          description: description,
+          completed: false,
+        }
+      })
+    }
+
+    // If no steps found, use default steps
+    if (steps.length === 0) {
+      steps = [
+        {
+          id: 1,
+          title: "Choose Your Business Structure",
+          description: `Based on your business idea, we recommend forming a ${recommendedType}. This structure provides liability protection and tax benefits suitable for your business type.`,
+          completed: false,
+        },
+        {
+          id: 2,
+          title: "Name Your Business",
+          description: `Your chosen name "${name}" needs to be checked for availability. Search the Michigan LARA database to ensure it's not already taken.`,
+          completed: false,
+        },
+        {
+          id: 3,
+          title: "Register with Michigan LARA",
+          description: "File Articles of Organization (LLC) or Articles of Incorporation (Corporation) with the Michigan Department of Licensing and Regulatory Affairs.",
+          completed: false,
+        },
+        {
+          id: 4,
+          title: "Obtain Federal EIN",
+          description: "Apply for an Employer Identification Number (EIN) from the IRS. This is free and can be done online in minutes.",
+          completed: false,
+        },
+        {
+          id: 5,
+          title: "Register for State Taxes",
+          description: "Register with the Michigan Department of Treasury for sales tax, income tax, and other applicable taxes.",
+          completed: false,
+        },
+        {
+          id: 6,
+          title: "Get Required Licenses & Permits",
+          description: "Obtain industry-specific licenses and permits based on your business type and location.",
+          completed: false,
+        },
+      ]
+    }
+
+    // Use the full AI response as guidance text
+    const einGuidance = aiText.includes('EIN') ? aiText : `**How to Get Your EIN:**
+
+1. **Online (Fastest)**: Visit IRS.gov and use the EIN Assistant. You'll receive your EIN immediately.
+2. **By Fax**: Complete Form SS-4 and fax to (855) 641-6935. Receive EIN in 4 business days.
+3. **By Mail**: Mail Form SS-4 to IRS. Takes 4-5 weeks.
+
+**What You'll Need:**
+- Your Social Security Number (SSN) or Individual Taxpayer Identification Number (ITIN)
+- Business name and address
+- Business structure type
+- Reason for applying (starting new business)
+
+**Cost**: FREE - No fee for EIN application
+
+**Timeline**: Immediate (online) to 4-5 weeks (mail)`
+
+    const llcGuidance = aiText.includes('LLC') ? aiText : `**Forming an LLC in Michigan:**
+
+**Step 1: Choose a Name**
+- Must include "LLC," "L.L.C.," or "Limited Liability Company"
+- Must be distinguishable from other Michigan businesses
+- Check availability at Michigan LARA website
+
+**Step 2: File Articles of Organization**
+- File online at Michigan LARA or mail Form CSCL/CD-700
+- Required information: business name, registered agent, purpose, duration
+- Filing fee: $50
+
+**Timeline**: 1-2 weeks for processing
+**Total Cost**: $50 (filing fee) + optional registered agent service`
+
+    const dbaGuidance = `**Doing Business As (DBA) in Michigan:**
+
+**What is a DBA?**
+A DBA (also called "Assumed Name") lets you operate under a name different from your legal business name.
+
+**Cost**: $10-$25 (varies by county)
+**Timeline**: 1-2 weeks`
+
+    const costs = [
+      { item: "LLC Articles of Organization", cost: "$50", timeline: "1-2 weeks" },
+      { item: "EIN Application", cost: "FREE", timeline: "Immediate (online)" },
+      { item: "Business License", cost: "$50-$200", timeline: "2-4 weeks" },
+      { item: "DBA/Assumed Name (if needed)", cost: "$10-$25", timeline: "1-2 weeks" },
+    ]
+
+    const checklist: ChecklistItem[] = [
+      { id: "1", task: "Choose business structure (LLC, Corporation, etc.)", completed: false, category: "Planning" },
+      { id: "2", task: "Check business name availability", completed: false, category: "Planning" },
+      { id: "3", task: "File Articles of Organization/Incorporation with LARA", completed: false, category: "Registration" },
+      { id: "4", task: "Obtain Federal EIN from IRS", completed: false, category: "Registration" },
+      { id: "5", task: "Register for Michigan state taxes", completed: false, category: "Tax" },
+      { id: "6", task: "Get required business licenses and permits", completed: false, category: "Licensing" },
+      { id: "7", task: "Open business bank account", completed: false, category: "Finance" },
+      { id: "8", task: "Create Operating Agreement or Bylaws", completed: false, category: "Legal" },
     ]
 
     return {
@@ -507,4 +693,3 @@ A DBA (also called "Assumed Name") lets you operate under a name different from 
     </div>
   )
 }
-

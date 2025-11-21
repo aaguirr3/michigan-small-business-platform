@@ -101,7 +101,7 @@ Focus on Michigan-specific regulations and requirements.`
         input: userPrompt,
         parameters: {
           decoding_method: 'greedy',
-          max_new_tokens: 4096,
+          max_new_tokens: 500,
           min_new_tokens: 50,
           temperature: 0.3, // Lower temperature for more factual responses
           top_p: 0.9,

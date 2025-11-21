@@ -144,7 +144,7 @@ export default function Home() {
             </Card>
 
             {/* Talent Card */}
-            <Card className="border border-border/50 bg-white hover:border-secondary/30 transition-all card-shadow hover:card-shadow-hover">
+            <Card className="border border-border/50 bg-white hover:border-secondary/30 transition-all card-shadow hover:card-shadow-hover flex flex-col">
               <CardHeader className="pb-4">
                 <div className="w-14 h-14 bg-secondary/10 rounded-xl flex items-center justify-center mb-4">
                   <svg className="w-7 h-7 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -161,8 +161,8 @@ export default function Home() {
                   Find professionals in your county
                 </CardDescription>
               </CardHeader>
-              <CardContent>
-                <p className="text-sm text-foreground/60 leading-relaxed mb-4">
+              <CardContent className="flex-1 flex flex-col">
+                <p className="text-sm text-foreground/60 leading-relaxed mb-4 flex-1">
                   Browse accountants, designers, consultants, and service providers by county and specialty.
                 </p>
                 <Link href="/talent">
@@ -174,7 +174,7 @@ export default function Home() {
             </Card>
 
             {/* Business Formation Card */}
-            <Card className="border border-border/50 bg-white hover:border-primary/30 transition-all card-shadow hover:card-shadow-hover">
+            <Card className="border border-border/50 bg-white hover:border-primary/30 transition-all card-shadow hover:card-shadow-hover flex flex-col">
               <CardHeader className="pb-4">
                 <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
                   <svg className="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -191,8 +191,8 @@ export default function Home() {
                   Step-by-step formation guide with checklist
                 </CardDescription>
               </CardHeader>
-              <CardContent>
-                <p className="text-sm text-foreground/60 leading-relaxed mb-4">
+              <CardContent className="flex-1 flex flex-col">
+                <p className="text-sm text-foreground/60 leading-relaxed mb-4 flex-1">
                   Get personalized guidance for EIN, LLC formation, permits, and costs. Download your checklist.
                 </p>
                 <Link href="/business-formation">

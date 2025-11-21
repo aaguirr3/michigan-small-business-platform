@@ -667,9 +667,7 @@ export default function CompliancePage() {
                                 <span className="font-semibold text-foreground">Estimated Total</span>
                                 <span className="font-bold text-primary">
                                   ${analysis.costs.reduce((sum, c) => {
-                                    // Extract the first number from cost string (e.g., "$50 - $100" -> 50)
-                                    const match = c.cost.match(/\d+/)
-                                    const num = match ? parseInt(match[0]) : 0
+                                    const num = parseInt(c.cost.replace(/[^0-9]/g, "")) || 0
                                     return sum + num
                                   }, 0).toLocaleString()}+
                                 </span>

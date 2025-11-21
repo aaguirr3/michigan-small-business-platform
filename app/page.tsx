@@ -51,7 +51,7 @@ export default function Home() {
       </section>
 
       {/* Features Grid */}
-      <section className="py-16 sm:py-24 bg-background">
+      <section className="py-16 sm:py-24 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h3 className="text-3xl font-bold text-foreground mb-12 text-center">What We Offer</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

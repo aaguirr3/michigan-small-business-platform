@@ -46,19 +46,23 @@ export async function POST(request: NextRequest) {
     }
 
     // Build the prompt for permit analysis
-    const systemPrompt = `You are an expert AI assistant specializing in Michigan business permits, licenses, and regulatory requirements.
-Analyze business ideas and provide comprehensive permit requirements, costs, steps, and documentation needs.
-Format your response as a JSON object with the following structure:
-{
-  "requiredPermits": ["permit1", "permit2"],
-  "countyConsiderations": ["consideration1", "consideration2"],
-  "costs": [{"item": "item1", "cost": "$X - $Y"}],
-  "steps": ["step1", "step2"],
-  "missingDocuments": ["doc1", "doc2"]
-}
-Focus on Michigan-specific requirements and be specific about costs and steps.`
+    const systemPrompt = `You are an expert AI assistant specializing in Michigan business permits, licenses, and regulatory requirements. You MUST respond ONLY with valid JSON, no other text.`
 
-    const userPrompt = `Business Idea: ${businessIdea}\nLocation: ${businessLocation || 'Michigan'}\n\nAnalyze this business idea and provide a comprehensive permit analysis in JSON format.`
+    const userPrompt = `Analyze this Michigan business and return ONLY a valid JSON object (no markdown, no explanations, just the JSON):
+
+Business Idea: ${businessIdea}
+Location: ${businessLocation || 'Michigan'}
+
+Return this exact JSON structure:
+{
+  "requiredPermits": ["list of required permits and licenses"],
+  "countyConsiderations": ["location-specific considerations"],
+  "costs": [{"item": "permit name", "cost": "$X - $Y"}],
+  "steps": ["step-by-step instructions"],
+  "missingDocuments": ["required documents"]
+}
+
+Provide comprehensive Michigan-specific permit requirements, costs, and steps. Return ONLY the JSON object, nothing else.`
 
     // Get IAM access token from API key
     let accessToken: string
@@ -86,7 +90,7 @@ Focus on Michigan-specific requirements and be specific about costs and steps.`
         input: userPrompt,
         parameters: {
           decoding_method: 'greedy',
-          max_new_tokens: 1000,
+          max_new_tokens: 2048,
           min_new_tokens: 100,
           temperature: 0.2, // Lower temperature for structured responses
           top_p: 0.9,
@@ -121,18 +125,69 @@ Focus on Michigan-specific requirements and be specific about costs and steps.`
 
     // Try to parse JSON from the response
     let permitAnalysis
+    let usedFallback = false
+
     try {
-      // Extract JSON from the response (might be wrapped in markdown code blocks)
-      const jsonMatch = aiResponse.match(/\{[\s\S]*\}/)
-      if (jsonMatch) {
-        permitAnalysis = JSON.parse(jsonMatch[0])
-      } else {
-        throw new Error('No JSON found in response')
+      // Check if response is empty or too short
+      if (!aiResponse || aiResponse.trim().length < 20) {
+        console.warn('Watson AI returned empty or very short response')
+        throw new Error('Empty response from Watson AI')
       }
+
+      // Clean up the response - remove markdown code blocks and extra text
+      let cleanedResponse = aiResponse
+        .replace(/```json\s*/g, '')
+        .replace(/```\s*/g, '')
+        .trim()
+
+      // Try multiple strategies to extract valid JSON
+      let jsonString = ''
+
+      // Strategy 1: Try to find JSON object with proper nesting
+      let braceCount = 0
+      let startIndex = cleanedResponse.indexOf('{')
+
+      if (startIndex !== -1) {
+        for (let i = startIndex; i < cleanedResponse.length; i++) {
+          const char = cleanedResponse[i]
+          if (char === '{') braceCount++
+          if (char === '}') braceCount--
+
+          jsonString += char
+
+          // Found complete JSON object
+          if (braceCount === 0) {
+            break
+          }
+        }
+      }
+
+      // Strategy 2: If strategy 1 failed, try simple regex
+      if (!jsonString || braceCount !== 0) {
+        const jsonMatch = cleanedResponse.match(/\{[^{}]*(?:\{[^{}]*\}[^{}]*)*\}/)
+        jsonString = jsonMatch ? jsonMatch[0] : ''
+      }
+
+      if (!jsonString) {
+        console.warn('No JSON object found in Watson response')
+        throw new Error('No valid JSON found in response')
+      }
+
+      permitAnalysis = JSON.parse(jsonString)
+
+      // Validate that we got the expected structure
+      if (!permitAnalysis.requiredPermits && !permitAnalysis.costs && !permitAnalysis.steps) {
+        console.warn('Watson AI returned JSON but missing required fields')
+        throw new Error('Invalid JSON structure - missing required fields')
+      }
+
+      console.log('✅ Successfully parsed Watson AI permit analysis')
     } catch (parseError) {
       // If parsing fails, use fallback
       console.error('Failed to parse Watson AI response:', parseError)
+      console.error('Raw AI response (first 500 chars):', aiResponse.substring(0, 500))
       permitAnalysis = generateFallbackPermitAnalysis(businessIdea, businessLocation)
+      usedFallback = true
     }
 
     // Ensure all required fields exist
@@ -142,7 +197,7 @@ Focus on Michigan-specific requirements and be specific about costs and steps.`
       costs: permitAnalysis.costs || [],
       steps: permitAnalysis.steps || [],
       missingDocuments: permitAnalysis.missingDocuments || [],
-      fallback: false,
+      fallback: usedFallback,
     }
 
     return NextResponse.json(result)

@@ -1,11 +1,7 @@
-[00:00:00.927] Server  LOG      ✓ Ready in 683ms
-[00:00:03.914] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:03.928] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:04.085] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:00:04.085] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:00:04.085] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763754344903}
-[00:00:04.963] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/compliance color: rgb(120, 120, 120) color: inherit {"dp":"/compliance","o":"http://localhost:3000/compliance","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763754345765}
-[00:00:05.091] Browser ERROR   React has detected a change in the order of Hooks called by %s. This will lead to bugs and errors if not fixed. For more information, read the Rules of Hooks: https://react.dev/link/rules-of-hooks
+[00:00:00.737] Server  LOG      ✓ Ready in 516ms
+[00:00:03.924] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:03.927] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:04.061] Browser ERROR   React has detected a change in the order of Hooks called by %s. This will lead to bugs and errors if not fixed. For more information, read the Rules of Hooks: https://react.dev/link/rules-of-hooks
 
    Previous render            Next render
    ------------------------------------------------------
@@ -22,17 +18,242 @@
 10. useEffect                 useEffect
 11. undefined                 useState
 
-[00:00:05.091] Browser ERROR   uncaughtError: Error: Rendered more hooks than during the previous render.
-[00:00:05.726] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/grants color: rgb(120, 120, 120) color: inherit {"dp":"/grants","o":"http://localhost:3000/grants","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763754346501}
-[00:00:06.279] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/compliance color: rgb(120, 120, 120) color: inherit {"dp":"/compliance","o":"http://localhost:3000/compliance","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763754347088}
-[00:00:13.242] Server  LOG     Watson Config Check: {}
-[00:00:19.068] Browser LOG     Watson AI Response: {"fallback":false,"hasError":false,"ok":true,"status":200}
-[00:31:37.761] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:31:37.924] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:31:37.924] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:31:37.924] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763756238822}
-[00:31:40.992] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/talent color: rgb(120, 120, 120) color: inherit {"dp":"/talent","o":"http://localhost:3000/talent","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763756241855}
-[00:31:51.954] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/compliance color: rgb(120, 120, 120) color: inherit {"dp":"/compliance","o":"http://localhost:3000/compliance","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763756252839}
-[00:32:13.210] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3000/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763756274105}
-[00:32:13.925] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/grants color: rgb(120, 120, 120) color: inherit {"dp":"/grants","o":"http://localhost:3000/grants","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763756274785}
-[00:32:50.169] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3000/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763756311062}
+[00:00:04.061] Browser ERROR   uncaughtError: Error: Rendered more hooks than during the previous render.
+[00:00:04.456] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:00:04.456] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/dashboard","route":"/dashboard"}
+[00:00:04.456] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3000/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763756868613}
+[00:00:04.779] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763756868934}
+[00:09:13.316] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/business-formation color: rgb(120, 120, 120) color: inherit {"dp":"/business-formation","o":"http://localhost:3000/business-formation","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763757417463}
+[00:11:51.160] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:11:51.169] Server  LOG      ✓ Compiled in 384ms
+[00:11:51.809] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:11:51.929] Browser ERROR   React has detected a change in the order of Hooks called by %s. This will lead to bugs and errors if not fixed. For more information, read the Rules of Hooks: https://react.dev/link/rules-of-hooks
+
+   Previous render            Next render
+   ------------------------------------------------------
+%s   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ CompliancePage 1. useContext                 useContext
+2. useContext                 useContext
+3. useState                   useState
+4. useState                   useState
+5. useState                   useState
+6. useState                   useState
+7. useState                   useState
+8. useState                   useState
+9. useState                   useState
+10. useEffect                 useEffect
+11. undefined                 useState
+
+[00:11:51.929] Browser ERROR   uncaughtError: Error: Rendered more hooks than during the previous render.
+[00:12:08.969] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:12:08.990] Server  LOG      ✓ Compiled in 110ms
+[00:12:09.323] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:12:09.450] Browser ERROR   React has detected a change in the order of Hooks called by %s. This will lead to bugs and errors if not fixed. For more information, read the Rules of Hooks: https://react.dev/link/rules-of-hooks
+
+   Previous render            Next render
+   ------------------------------------------------------
+%s   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ CompliancePage 1. useContext                 useContext
+2. useContext                 useContext
+3. useState                   useState
+4. useState                   useState
+5. useState                   useState
+6. useState                   useState
+7. useState                   useState
+8. useState                   useState
+9. useState                   useState
+10. useEffect                 useEffect
+11. undefined                 useState
+
+[00:12:09.450] Browser ERROR   uncaughtError: Error: Rendered more hooks than during the previous render.
+[00:13:33.949] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:13:34.112] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:13:34.112] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:13:34.112] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763757678278}
+[00:14:29.192] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:14:29.193] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:14:29.205] Server  LOG      ✓ Compiled in 157ms
+[00:14:29.590] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:14:29.705] Browser ERROR   React has detected a change in the order of Hooks called by %s. This will lead to bugs and errors if not fixed. For more information, read the Rules of Hooks: https://react.dev/link/rules-of-hooks
+
+   Previous render            Next render
+   ------------------------------------------------------
+%s   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ CompliancePage 1. useContext                 useContext
+2. useContext                 useContext
+3. useState                   useState
+4. useState                   useState
+5. useState                   useState
+6. useState                   useState
+7. useState                   useState
+8. useState                   useState
+9. useState                   useState
+10. useEffect                 useEffect
+11. undefined                 useState
+
+[00:14:29.705] Browser ERROR   uncaughtError: Error: Rendered more hooks than during the previous render.
+[00:14:33.256] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:14:33.401] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:14:33.401] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:14:33.401] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763757737567}
+[00:14:34.511] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:14:34.652] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:14:34.652] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:14:34.652] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763757738819}
+[00:14:38.974] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:14:39.115] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:14:39.115] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:14:39.115] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763757743282}
+[00:14:39.590] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:14:39.730] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:14:39.730] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:14:39.730] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763757743896}
+[00:15:06.890] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:15:07.034] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:15:07.034] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:15:07.034] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763757771201}
+[00:15:07.558] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:15:07.697] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:15:07.697] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:15:07.697] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763757771864}
+[00:15:08.427] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:15:08.568] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:15:08.568] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:15:08.568] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763757772735}
+[00:15:09.135] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:15:09.275] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:15:09.275] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:15:09.276] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763757773443}
+[00:15:13.146] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/talent/my-profile color: rgb(120, 120, 120) color: inherit {"dp":"/talent/my-profile","o":"http://localhost:3000/talent/my-profile","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763757777308}
+[00:15:22.102] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:15:22.282] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:15:22.282] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/talent/my-profile","route":"/talent/my-profile"}
+[00:15:22.282] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/talent/my-profile color: rgb(120, 120, 120) color: inherit {"dp":"/talent/my-profile","o":"http://localhost:3000/talent/my-profile","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763757786429}
+[00:15:22.282] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/login color: rgb(120, 120, 120) color: inherit {"dp":"/login","o":"http://localhost:3000/login","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763757786445}
+[00:15:23.203] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:15:23.337] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:15:23.337] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/login","route":"/login"}
+[00:15:23.337] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/login color: rgb(120, 120, 120) color: inherit {"dp":"/login","o":"http://localhost:3000/login","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763757787504}
+[00:15:24.572] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763757788734}
+[00:15:39.311] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:15:39.454] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:15:39.454] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:15:39.454] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763757803621}
+[00:15:39.604] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:15:39.647] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:15:39.647] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:15:39.774] Server  LOG      ✓ Compiled in 168ms
+[00:15:39.775] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:15:39.976] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:15:40.092] Browser ERROR   React has detected a change in the order of Hooks called by %s. This will lead to bugs and errors if not fixed. For more information, read the Rules of Hooks: https://react.dev/link/rules-of-hooks
+
+   Previous render            Next render
+   ------------------------------------------------------
+%s   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ CompliancePage 1. useContext                 useContext
+2. useContext                 useContext
+3. useState                   useState
+4. useState                   useState
+5. useState                   useState
+6. useState                   useState
+7. useState                   useState
+8. useState                   useState
+9. useState                   useState
+10. useEffect                 useEffect
+11. undefined                 useState
+
+[00:15:40.092] Browser ERROR   uncaughtError: Error: Rendered more hooks than during the previous render.
+[00:15:48.717] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:15:48.763] Server  LOG      ✓ Compiled in 108ms
+[00:15:48.792] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:15:49.169] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:15:49.286] Browser ERROR   React has detected a change in the order of Hooks called by %s. This will lead to bugs and errors if not fixed. For more information, read the Rules of Hooks: https://react.dev/link/rules-of-hooks
+
+   Previous render            Next render
+   ------------------------------------------------------
+%s   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ CompliancePage 1. useContext                 useContext
+2. useContext                 useContext
+3. useState                   useState
+4. useState                   useState
+5. useState                   useState
+6. useState                   useState
+7. useState                   useState
+8. useState                   useState
+9. useState                   useState
+10. useEffect                 useEffect
+11. undefined                 useState
+
+[00:15:49.286] Browser ERROR   uncaughtError: Error: Rendered more hooks than during the previous render.
+[00:15:52.794] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:15:52.934] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:15:52.934] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:15:52.934] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763757817101}
+[00:16:47.432] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:16:47.573] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:16:47.573] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:16:47.573] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763757871742}
+[00:16:48.317] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:16:48.454] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:16:48.454] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:16:48.454] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763757872624}
+[00:17:18.165] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:17:18.310] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:17:18.310] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:17:18.310] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763757902478}
+[00:17:23.345] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3000/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763757907507}
+[00:17:26.813] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/grants color: rgb(120, 120, 120) color: inherit {"dp":"/grants","o":"http://localhost:3000/grants","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763757910930}
+[00:17:29.829] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3000/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763757913988}
+[00:17:33.837] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/compliance color: rgb(120, 120, 120) color: inherit {"dp":"/compliance","o":"http://localhost:3000/compliance","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763757917991}
+[00:17:45.886] Server  LOG     Watson Config Check: {}
+[00:17:52.367] Browser LOG     Watson AI Response: {"fallback":false,"hasError":false,"ok":true,"status":200}
+[00:18:59.486] Server  LOG     Watson Config Check: {}
+[00:19:04.525] Browser LOG     Watson AI Response: {"fallback":false,"hasError":false,"ok":true,"status":200}
+[00:20:53.824] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3000/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763758117988}
+[00:21:06.595] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/grants color: rgb(120, 120, 120) color: inherit {"dp":"/grants","o":"http://localhost:3000/grants","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763758130714}
+[00:21:07.353] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/compliance color: rgb(120, 120, 120) color: inherit {"dp":"/compliance","o":"http://localhost:3000/compliance","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763758131511}
+[00:21:08.664] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/talent color: rgb(120, 120, 120) color: inherit {"dp":"/talent","o":"http://localhost:3000/talent","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763758132740}
+[00:21:08.859] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/business-formation color: rgb(120, 120, 120) color: inherit {"dp":"/business-formation","o":"http://localhost:3000/business-formation","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763758133022}
+[00:21:10.805] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3000/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763758134972}
+[00:21:34.443] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/talent color: rgb(120, 120, 120) color: inherit {"dp":"/talent","o":"http://localhost:3000/talent","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763758158586}
+[00:21:39.930] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/compliance color: rgb(120, 120, 120) color: inherit {"dp":"/compliance","o":"http://localhost:3000/compliance","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763758164080}
+[00:22:30.000] Server  LOG     Watson Config Check: {}
+[00:22:37.389] Browser LOG     Watson AI Response: {"fallback":false,"hasError":false,"ok":true,"status":200}
+[00:23:22.080] Browser LOG     Watson AI Permit Response: {"fallback":false,"hasError":false,"ok":true,"status":200}
+[00:26:21.257] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/business-formation color: rgb(120, 120, 120) color: inherit {"dp":"/business-formation","o":"http://localhost:3000/business-formation","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763758445357}
+[00:27:31.298] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/compliance color: rgb(120, 120, 120) color: inherit {"dp":"/compliance","o":"http://localhost:3000/compliance","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763758515386}
+[00:27:48.187] Server  ERROR   Failed to parse Watson AI response: SyntaxError: Unexpected non-whitespace character after JSON at position 62
+[00:27:48.291] Browser LOG     Watson AI Permit Response: {"fallback":false,"hasError":false,"ok":true,"status":200}
+[00:28:52.381] Browser LOG     Watson AI Permit Response: {"fallback":false,"hasError":false,"ok":true,"status":200}
+[00:30:31.178] Server  ERROR   Failed to parse Watson AI response: Error: Invalid JSON structure
+[00:30:31.179] Server  ERROR   Raw AI response: " Include the following details:\n\n1. Zoning Regulations\n   - Is food truck operation allowed in the specified location?\n   - What are the specific zoning requirements for food trucks in Alpena?\n\n2. Health Department Permits\n   - What are the necessary health department permits required to operate a food truck in Alpena?\n   - Are there any specific health code regulations that apply to food trucks in Alpena?\n\n3. Business Licenses\n   - What type of business license is needed to operate a food truck"
+[00:30:31.288] Browser LOG     Watson AI Permit Response: {"fallback":false,"hasError":false,"ok":true,"status":200}
+[00:33:17.106] Server  LOG     ✅ Successfully parsed Watson AI permit analysis
+[00:33:17.217] Browser LOG     Watson AI Permit Response: {"fallback":false,"hasError":false,"ok":true,"status":200}
+[00:34:23.089] Server  LOG      ✓ Compiled in 103ms
+[00:34:23.091] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:34:23.606] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:34:23.727] Browser ERROR   React has detected a change in the order of Hooks called by %s. This will lead to bugs and errors if not fixed. For more information, read the Rules of Hooks: https://react.dev/link/rules-of-hooks
+
+   Previous render            Next render
+   ------------------------------------------------------
+%s   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ CompliancePage 1. useContext                 useContext
+2. useContext                 useContext
+3. useState                   useState
+4. useState                   useState
+5. useState                   useState
+6. useState                   useState
+7. useState                   useState
+8. useState                   useState
+9. useState                   useState
+10. useEffect                 useEffect
+11. undefined                 useState
+
+[00:34:23.727] Browser ERROR   uncaughtError: Error: Rendered more hooks than during the previous render.
+[00:35:00.596] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/business-formation color: rgb(120, 120, 120) color: inherit {"dp":"/business-formation","o":"http://localhost:3000/business-formation","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763758964696}
+[00:35:15.608] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/grants color: rgb(120, 120, 120) color: inherit {"dp":"/grants","o":"http://localhost:3000/grants","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763758979662}
+[00:35:15.959] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/compliance color: rgb(120, 120, 120) color: inherit {"dp":"/compliance","o":"http://localhost:3000/compliance","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763758980061}
+[00:35:45.984] Server  LOG     Watson Config Check: {}
+[00:35:54.869] Browser LOG     Watson AI Response: {"fallback":false,"hasError":false,"ok":true,"status":200}
+[00:36:30.992] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/business-formation color: rgb(120, 120, 120) color: inherit {"dp":"/business-formation","o":"http://localhost:3000/business-formation","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763759055094}

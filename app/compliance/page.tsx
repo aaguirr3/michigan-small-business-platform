@@ -452,8 +452,8 @@ export default function CompliancePage() {
                         </div>
                       </CardHeader>
                       <CardContent>
-                        <div className="bg-muted/50 p-4 rounded-lg mb-4">
-                          <p className="text-foreground leading-relaxed">{response.response}</p>
+                        <div className="bg-muted/50 p-4 rounded-lg mb-4 max-h-96 overflow-y-auto">
+                          <p className="text-foreground leading-relaxed whitespace-pre-wrap">{response.response}</p>
                         </div>
                         {response.requiresLegalReview && (
                           <div className="bg-accent/10 border border-accent/20 p-4 rounded-lg">
@@ -667,7 +667,9 @@ export default function CompliancePage() {
                                 <span className="font-semibold text-foreground">Estimated Total</span>
                                 <span className="font-bold text-primary">
                                   ${analysis.costs.reduce((sum, c) => {
-                                    const num = parseInt(c.cost.replace(/[^0-9]/g, "")) || 0
+                                    // Extract the first number from cost string (e.g., "$50 - $100" -> 50)
+                                    const match = c.cost.match(/\d+/)
+                                    const num = match ? parseInt(match[0]) : 0
                                     return sum + num
                                   }, 0).toLocaleString()}+
                                 </span>

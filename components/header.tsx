@@ -8,8 +8,10 @@ export function Header() {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 flex-shrink-0">
-            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-white font-bold text-sm">
-              ML
+            <div className="w-10 h-10 flex items-center justify-center flex-shrink-0">
+              <svg viewBox="0 0 40 40" className="w-full h-full text-primary" fill="currentColor">
+                <path d="M12 4c-2.2 0-4 1.8-4 4v14c0 3.3 2.7 6 6 6h2v-2h-2c-2.2 0-4-1.8-4-4V8c0-.6.4-1 1-1h12c.6 0 1 .4 1 1v2h2V8c0-2.2-1.8-4-4-4H12zm14 6v10c0 1.1.9 2 2 2s2-.9 2-2v-10c0-1.1-.9-2-2-2s-2 .9-2 2zm6 0v10c0 1.1.9 2 2 2s2-.9 2-2v-10c0-1.1-.9-2-2-2s-2 .9-2 2zM8 22h2v10c0 1.1-.9 2-2 2s-2-.9-2-2v-10zm4 0h2v10c0 1.1-.9 2-2 2s-2-.9-2-2v-10z" />
+              </svg>
             </div>
             <div className="hidden sm:inline">
               <h1 className="text-lg font-bold text-foreground">MittenLaunch</h1>
